@@ -1,3 +1,4 @@
-﻿
-using var game = new MineAgeIdle.Game1();
+﻿using MineAgeIdle;
+
+using var game = GameManager.getInstance();
 game.Run();

@@ -1,0 +1,6 @@
+https://flamingtext.com/
+1 -> Fabulous
+Patern -> Standard
+Glow -> #737373
+Transparent
+AutoCrop
