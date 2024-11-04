@@ -9,21 +9,21 @@ using System;
 
 namespace MineAgeIdle
 {
-    internal class MountainView : View
+    internal class IslandView : View
     {
-        ScaledSprite mountainBackgroundSprite;
-        ScaledSprite buyPickaxeButtonFrameSprite;
-        List<MountainButton> mountainButtons = new List<MountainButton>();
-        MovingSprite pickaxeSprite;
+        ScaledSprite islandBackgroundSprite;
+        ScaledSprite buyShovelButtonFrameSprite;
+        List<IslandButton> islandButtons = new List<IslandButton>();
+        MovingSprite shovelSprite;
 
         private GameManager gameManager;
         public SpriteFont defaultFont;
 
         private bool isLeftMousePressed;
 
-        private float pickaxePrice = 10;
+        private float shovelPrice = 10;
 
-        public MountainView()
+        public IslandView()
         {
             gameManager = GameManager.getInstance();
 

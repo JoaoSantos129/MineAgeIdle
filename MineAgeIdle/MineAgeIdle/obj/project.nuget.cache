@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JRqHk8jOtw0=",
+  "dgSpecHash": "cgiFLRMrSuwXPsS6uZ6GXxL5U/kjNwjRHX+d4oN5NsXjOis9hGLzS4634l/Q9wnMHkPa4pW70n2kNf8181ft0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle.csproj",
+  "projectFilePath": "D:\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joao.santos\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\joao.santos\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\joao.santos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\joao.santos\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\joao.santos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\joao.santos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.35\\microsoft.netcore.app.host.win-x64.6.0.35.nupkg.sha512"
+    "C:\\Users\\jota1\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\jota1\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
   ],
   "logs": []
 }

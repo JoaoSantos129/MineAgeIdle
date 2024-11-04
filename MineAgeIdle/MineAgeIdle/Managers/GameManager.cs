@@ -24,8 +24,8 @@ namespace MineAgeIdle
         public double axesAmount { get; set; } = 0;
         public double pickaxesAmount { get; set; } = 0;
         public double stoneAmount { get; set; } = 0;
-        public double tntAmount { get; set; } = 0;
-        public double diamondsAmount { get; set; } = 0;
+        public double tntMachinesAmount { get; set; } = 0;
+        public double gemsAmount { get; set; } = 0;
         public double shovelsAmount { get; set; } = 0;
         public double treasuresAmount { get; set; } = 0;
         public double coinsAmount { get; set; } = 100f;
@@ -36,9 +36,9 @@ namespace MineAgeIdle
         ShopView shopView;
         ForestView forestView;
         MountainView mountainView;
-        /*MineView mineView;
+        MineView mineView;
         IslandView islandView;
-        CasinoView casinoView;*/
+        //CasinoView casinoView;
 
         public GameManager()
         {
@@ -78,9 +78,9 @@ namespace MineAgeIdle
             shopView = new ShopView();
             forestView = new ForestView();
             mountainView = new MountainView();
-            /*mineView = new MineView();
+            mineView = new MineView();
             islandView = new IslandView();
-            casinoView = new CasinoView();*/
+            //casinoView = new CasinoView();
         }
 
         protected override void Update(GameTime gameTime)
@@ -118,7 +118,7 @@ namespace MineAgeIdle
                     menuView.Update(gameTime);
                     mountainView.Update(gameTime);
                     break;
-                /*case 40:
+                case 40:
                     menuView.Update(gameTime);
                     mineView.Update(gameTime);
                     break;
@@ -126,7 +126,7 @@ namespace MineAgeIdle
                     menuView.Update(gameTime);
                     islandView.Update(gameTime);
                     break;
-                case 60:
+                /*case 60:
                     menuView.Update(gameTime);
                     casinoView.Update(gameTime);
                     break;*/
@@ -158,7 +158,7 @@ namespace MineAgeIdle
                     mountainView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
-                /*case 40:
+                case 40:
                     mineView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
@@ -166,7 +166,7 @@ namespace MineAgeIdle
                     islandView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
-                case 60:
+                /*case 60:
                     casinoView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;*/
