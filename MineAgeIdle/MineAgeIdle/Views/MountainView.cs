@@ -114,7 +114,7 @@ namespace MineAgeIdle
                 }
             }
 
-            if (gameManager.axesAmount > 0)
+            if (gameManager.pickaxesAmount > 0)
             {
                 // Update the pickaxe's position using the Update method of MovingSprite
                 pickaxeSprite.Update();
@@ -141,7 +141,7 @@ namespace MineAgeIdle
         {
             if (gameManager.coinsAmount - gameManager.CalculatePrice(pickaxePrice) > 0)
             {
-                gameManager.axesAmount++;
+                gameManager.pickaxesAmount++;
                 pickaxePrice = gameManager.CalculatePrice(pickaxePrice);
                 gameManager.coinsAmount -= pickaxePrice;
             }

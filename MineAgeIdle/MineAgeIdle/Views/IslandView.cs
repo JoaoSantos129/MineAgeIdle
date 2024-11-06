@@ -34,42 +34,42 @@ namespace MineAgeIdle
 
         private void LoadContent()
         {
-            //Texture2D mountainBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\MountainBackground");
-            Texture2D mountainBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Start\\StartBackground");
-            mountainBackgroundSprite = new ScaledSprite(mountainBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
+            //Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\IslandBackground");
+            Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Start\\StartBackground");
+            islandBackgroundSprite = new ScaledSprite(islandBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
-            Texture2D buyPickaxeButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
-            buyPickaxeButtonFrameSprite = new ScaledSprite(buyPickaxeButtonFrameTexture, new Vector2(540, 750), 353, 155);
+            Texture2D buyShovelButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
+            buyShovelButtonFrameSprite = new ScaledSprite(buyShovelButtonFrameTexture, new Vector2(540, 750), 353, 155);
 
-            Texture2D buyPickaxeButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\BuyPickaxeButton");
-            MountainButton buyPickaxeButtonSprite = new MountainButton(buyPickaxeButtonTexture, new Vector2((buyPickaxeButtonFrameSprite.Width / 2) - (318 / 2) + buyPickaxeButtonFrameSprite.position.X, 10 + buyPickaxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
-            mountainButtons.Add(buyPickaxeButtonSprite);
+            Texture2D buyShovelButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\BuyShovelButton");
+            IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
+            islandButtons.Add(buyShovelButtonSprite);
 
-            //Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
-            Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
+            //Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
+            Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
         {
-            string stringPickaxesAmount = GameManager.GetStringFormattedAmount(gameManager.pickaxesAmount);
-            string stringNextPickaxePrice = GameManager.GetStringFormattedAmount(gameManager.CalculatePrice(pickaxePrice));
+            string stringShovelsAmount = GameManager.GetStringFormattedAmount(gameManager.shovelsAmount);
+            string stringNextShovelPrice = GameManager.GetStringFormattedAmount(gameManager.CalculatePrice(shovelPrice));
 
-            spriteBatch.Draw(mountainBackgroundSprite.texture, mountainBackgroundSprite.Rect, Color.White);
-            spriteBatch.Draw(buyPickaxeButtonFrameSprite.texture, buyPickaxeButtonFrameSprite.Rect, Color.White);
+            spriteBatch.Draw(islandBackgroundSprite.texture, islandBackgroundSprite.Rect, Color.White);
+            spriteBatch.Draw(buyShovelButtonFrameSprite.texture, buyShovelButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "Pickaxes : " + stringPickaxesAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "Pickaxe price : " + stringNextPickaxePrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Shovels : " + stringShovelsAmount, new Vector2(565, 820), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Shovel price : " + stringNextShovelPrice, new Vector2(565, 860), Color.Black);
 
-            foreach (MountainButton button in mountainButtons)
+            foreach (IslandButton button in islandButtons)
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
             }
 
-            if (gameManager.pickaxesAmount > 0)
+            if (gameManager.shovelsAmount > 0)
             {
-                pickaxeSprite.Update(); // Ensure Update is called
-                pickaxeSprite.Draw(spriteBatch); // Draw using the new Draw method
+                shovelSprite.Update(); // Ensure Update is called
+                shovelSprite.Draw(spriteBatch); // Draw using the new Draw method
             }
         }
 
@@ -79,7 +79,7 @@ namespace MineAgeIdle
 
             UpdateButtonStates();
 
-            foreach (MountainButton button in mountainButtons)
+            foreach (IslandButton button in islandButtons)
             {
                 button.IsHovered = button.Rect.Contains(mouseState.Position);   // Check where the mouse is
 
@@ -89,7 +89,7 @@ namespace MineAgeIdle
                     isLeftMousePressed = true;
 
                     // Reset isOnView for all buttons before setting it for the pressed button
-                    foreach (var btn in mountainButtons)
+                    foreach (var btn in islandButtons)
                     {
                         btn.IsOnView = false;
                     }
@@ -100,7 +100,7 @@ namespace MineAgeIdle
                     switch (button.Id)
                     {
                         case 1:
-                            gameManager.stoneAmount++;
+                            gameManager.treasuresAmount++;
                             break;
                         case 2:
                             ConfirmBuy();
@@ -116,14 +116,14 @@ namespace MineAgeIdle
 
             if (gameManager.axesAmount > 0)
             {
-                // Update the pickaxe's position using the Update method of MovingSprite
-                pickaxeSprite.Update();
+                // Update the shovel's position using the Update method of MovingSprite
+                shovelSprite.Update();
 
-                // Increment stoneAmount if the pickaxe has completed a rotation
-                if (pickaxeSprite.hasDoneRotation)
+                // Increment treasuresAmount if the shovel has completed a rotation
+                if (shovelSprite.hasDoneRotation)
                 {
-                    gameManager.stoneAmount += gameManager.pickaxesAmount; // Increment stone amount
-                    pickaxeSprite.ResetRotation(); // Reset rotation status if needed
+                    gameManager.treasuresAmount += gameManager.shovelsAmount; // Increment treasure amount
+                    shovelSprite.ResetRotation(); // Reset rotation status if needed
                 }
             }
         }
@@ -131,7 +131,7 @@ namespace MineAgeIdle
         // To put in GameManager
         private void UpdateButtonStates()
         {
-            foreach (var button in mountainButtons)
+            foreach (var button in islandButtons)
             {
                 button.IsOnView = (gameManager.CurrentView == button.Id);
             }
@@ -139,11 +139,11 @@ namespace MineAgeIdle
 
         private void ConfirmBuy()
         {
-            if (gameManager.coinsAmount - gameManager.CalculatePrice(pickaxePrice) > 0)
+            if (gameManager.coinsAmount - gameManager.CalculatePrice(shovelPrice) > 0)
             {
                 gameManager.axesAmount++;
-                pickaxePrice = gameManager.CalculatePrice(pickaxePrice);
-                gameManager.coinsAmount -= pickaxePrice;
+                shovelPrice = gameManager.CalculatePrice(shovelPrice);
+                gameManager.coinsAmount -= shovelPrice;
             }
         }
     }

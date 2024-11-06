@@ -54,14 +54,14 @@ namespace MineAgeIdle
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
         {
-            string stringTntAmount = GameManager.GetStringFormattedAmount(gameManager.tntMachinesAmount);
-            string stringNextTntPrice = GameManager.GetStringFormattedAmount(gameManager.CalculatePrice(tntMachinePrice));
+            string stringTntMachineAmount = GameManager.GetStringFormattedAmount(gameManager.tntMachinesAmount);
+            string stringNextTntMachinePrice = GameManager.GetStringFormattedAmount(gameManager.CalculatePrice(tntMachinePrice));
 
             spriteBatch.Draw(mineBackgroundSprite.texture, mineBackgroundSprite.Rect, Color.White);
             spriteBatch.Draw(buyTntMachineButtonFrameSprite.texture, buyTntMachineButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "TNT machines : " + stringTntAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "TNT machine price : " + stringNextTntPrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "TNT machines : " + stringTntMachineAmount, new Vector2(565, 820), Color.Black);
+            spriteBatch.DrawString(defaultFont, "TNT machine price : " + stringNextTntMachinePrice, new Vector2(565, 860), Color.Black);
 
             foreach (MineButton button in mineButtons)
             {
@@ -102,7 +102,7 @@ namespace MineAgeIdle
                     switch (button.Id)
                     {
                         case 1:
-                            gameManager.stoneAmount++;
+                            gameManager.gemsAmount++;
                             break;
                         case 2:
                             ConfirmBuy();
@@ -116,12 +116,12 @@ namespace MineAgeIdle
                 }
             }
 
-            if (gameManager.axesAmount > 0)
+            if (gameManager.tntMachinesAmount > 0)
             {
-                // Update the pickaxe's position using the Update method of MovingSprite
+                // Update the tnt's position using the Update method of MovingSprite
                 tntSprite.Update();
 
-                // Increment gemsAmount if the pickaxe has completed a rotation
+                // Increment gemsAmount if the tnt has completed a rotation
                 if (tntSprite.hasDoneRotation)
                 {
                     gameManager.gemsAmount += gameManager.tntMachinesAmount; // Increment gems amount
@@ -143,7 +143,7 @@ namespace MineAgeIdle
         {
             if (gameManager.coinsAmount - gameManager.CalculatePrice(tntMachinePrice) > 0)
             {
-                gameManager.axesAmount++;
+                gameManager.tntMachinesAmount++;
                 tntMachinePrice = gameManager.CalculatePrice(tntMachinePrice);
                 gameManager.coinsAmount -= tntMachinePrice;
             }
