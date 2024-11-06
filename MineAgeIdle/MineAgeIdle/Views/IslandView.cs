@@ -114,7 +114,7 @@ namespace MineAgeIdle
                 }
             }
 
-            if (gameManager.axesAmount > 0)
+            if (gameManager.shovelsAmount > 0)
             {
                 // Update the shovel's position using the Update method of MovingSprite
                 shovelSprite.Update();
@@ -141,7 +141,7 @@ namespace MineAgeIdle
         {
             if (gameManager.coinsAmount - gameManager.CalculatePrice(shovelPrice) > 0)
             {
-                gameManager.axesAmount++;
+                gameManager.shovelsAmount++;
                 shovelPrice = gameManager.CalculatePrice(shovelPrice);
                 gameManager.coinsAmount -= shovelPrice;
             }

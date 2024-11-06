@@ -68,7 +68,7 @@ namespace MineAgeIdle
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
             }
 
-            if (gameManager.pickaxesAmount > 0)
+            if (gameManager.tntMachinesAmount > 0)
             {
                 tntSprite.Update(); // Ensure Update is called
                 tntSprite.Draw(spriteBatch); // Draw using the new Draw method

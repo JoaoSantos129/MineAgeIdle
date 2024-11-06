@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MineAgeIdle.Views;
 using System;
 
 namespace MineAgeIdle
@@ -38,7 +37,7 @@ namespace MineAgeIdle
         MountainView mountainView;
         MineView mineView;
         IslandView islandView;
-        //CasinoView casinoView;
+        CasinoView casinoView;
 
         public GameManager()
         {
@@ -80,7 +79,7 @@ namespace MineAgeIdle
             mountainView = new MountainView();
             mineView = new MineView();
             islandView = new IslandView();
-            //casinoView = new CasinoView();
+            casinoView = new CasinoView();
         }
 
         protected override void Update(GameTime gameTime)
@@ -126,10 +125,10 @@ namespace MineAgeIdle
                     menuView.Update(gameTime);
                     islandView.Update(gameTime);
                     break;
-                /*case 60:
+                case 60:
                     menuView.Update(gameTime);
                     casinoView.Update(gameTime);
-                    break;*/
+                    break;
             }
 
             base.Update(gameTime);
@@ -166,10 +165,10 @@ namespace MineAgeIdle
                     islandView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
-                /*case 60:
+                case 60:
                     casinoView.Draw(gameTime, _spriteBatch, tick);
                     menuView.Draw(gameTime, _spriteBatch, tick);
-                    break;*/
+                    break;
             }
 
             _spriteBatch.End();
