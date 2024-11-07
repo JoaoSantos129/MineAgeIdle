@@ -49,7 +49,7 @@ namespace MineAgeIdle
 
             //Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\TNT");
             Texture2D TntTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            tntSprite = new MovingSprite(TntTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
+            tntSprite = new MovingSprite(TntTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)

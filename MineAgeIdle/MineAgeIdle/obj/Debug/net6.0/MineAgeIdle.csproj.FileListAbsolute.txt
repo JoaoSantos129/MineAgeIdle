@@ -102,3 +102,7 @@ C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdl
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\Pickaxe.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\IslandBackground.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\MountainBackground.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\IslandBackground.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\Shovel.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\MountainBackground.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\Pickaxe.xnb

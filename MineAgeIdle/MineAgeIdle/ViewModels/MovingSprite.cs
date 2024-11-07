@@ -16,30 +16,34 @@ namespace MineAgeIdle
         private bool isReversing; // Determines if the rotation is reversing
         private float rotationAmount; // Amount of rotation in degrees
         public bool hasDoneRotation; // Determines when sprite has done a full rotation
+        private bool reverseRotation; // If true the sprite will start with a right to left rotation
 
-        public MovingSprite(Texture2D texture, Vector2 position, int width, int height, Color color, Color backgroundColor, float rotation, float rotationSpeed, float rotationAmount)
+        public MovingSprite(Texture2D texture, Vector2 position, int width, int height, Color color, Color backgroundColor, float rotation, float rotationSpeed, float rotationAmount, bool reverseRotation)
             : base(texture, position, width, height, color, backgroundColor)
         {
+            this.rotation = rotation;
             this.rotationSpeed = rotationSpeed; // Initialize rotation speed
-            this.rotation = 0f; // Initialize rotation
             this.rotationAmount = rotationAmount; // Set the desired rotation amount
             this.targetRotation = MathHelper.ToRadians(rotationAmount); // Convert rotation amount to radians
             this.isReversing = false; // Initially, it is not reversing
             this.hasDoneRotation = false; // Initially, has not completed a rotation
+            this.reverseRotation = reverseRotation;
         }
 
         public override void Update()
         {
             base.Update();
 
+            float direction = reverseRotation ? -1 : 1; // Determine rotation direction
+
             // Update the rotation based on the current state (reversing or not)
             if (isReversing)
             {
                 // Reverse the rotation
-                rotation -= rotationSpeed / 1000;
+                rotation -= direction * rotationSpeed / 1000;
 
                 // Stop reversing once we reach or go below zero rotation
-                if (rotation <= 0)
+                if ((reverseRotation && rotation >= 0) || (!reverseRotation && rotation <= 0))
                 {
                     rotation = 0; // Clamp the rotation to zero
                     isReversing = false; // Stop reversing
@@ -49,13 +53,13 @@ namespace MineAgeIdle
             else
             {
                 // Rotate forward until we hit the target rotation
-                rotation += rotationSpeed / 1000;
+                rotation += direction * rotationSpeed / 1000;
 
 
                 // Once we reach the target rotation (90 degrees), start reversing
-                if (rotation >= targetRotation)
+                if ((reverseRotation && rotation <= -targetRotation) || (!reverseRotation && rotation >= targetRotation))
                 {
-                    rotation = targetRotation; // Clamp to the target rotation
+                    rotation = reverseRotation ? -targetRotation : targetRotation; // Clamp to the target rotation
                     isReversing = true; // Start reversing
 
                     if (!hasDoneRotation) // Increment only once

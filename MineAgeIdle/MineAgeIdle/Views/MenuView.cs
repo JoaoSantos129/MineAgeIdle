@@ -12,6 +12,7 @@ namespace MineAgeIdle
     internal class MenuView : View
     {
         ScaledSprite menuBackgroundSprite;
+        ScaledSprite currenciesBackgroundSprite;
         List<MenuButton> menuButtons = new List<MenuButton>();
 
         private GameManager gameManager;
@@ -34,6 +35,9 @@ namespace MineAgeIdle
         {
             Texture2D menuBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Menu\\MenuBackground");
             menuBackgroundSprite = new ScaledSprite(menuBackgroundTexture, Vector2.Zero, Constants.MENU_WIDTH, Constants.DEFAULT_SCREEN_HEIGHT);
+
+            Texture2D currenciesBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
+            currenciesBackgroundSprite = new ScaledSprite(currenciesBackgroundTexture, Vector2.Zero, Constants.MENU_WIDTH, 255);
 
             Texture2D menuShopTexture = gameManager.Content.Load<Texture2D>("HUD\\Menu\\Buttons\\ShopButton");
             MenuButton menuShopSprite = new MenuButton(menuShopTexture, new Vector2((Constants.MENU_WIDTH - 176) / 2, currentY), 176, Constants.MENU_BUTTONS_HEIGHT, Color.White, Color.Transparent, 1);
@@ -81,11 +85,18 @@ namespace MineAgeIdle
         {
             string stringCoinsAmount = GameManager.GetStringFormattedAmount(Math.Round(gameManager.coinsAmount, 2));
             string stringWoodAmount = GameManager.GetStringFormattedAmount(gameManager.woodAmount);
+            string stringStoneAmount = GameManager.GetStringFormattedAmount(gameManager.stoneAmount);
+            string stringGemsAmount = GameManager.GetStringFormattedAmount(gameManager.gemsAmount);
+            string stringTreasuresAmount = GameManager.GetStringFormattedAmount(gameManager.treasuresAmount);
 
             spriteBatch.Draw(menuBackgroundSprite.texture, menuBackgroundSprite.Rect, Color.White);
+            spriteBatch.Draw(currenciesBackgroundSprite.texture, currenciesBackgroundSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "MA Coins : " + stringCoinsAmount, new Vector2(110, 15), Color.Gold);
-            spriteBatch.DrawString(defaultFont, "Wood : " + stringWoodAmount, new Vector2(110, 55), Color.LimeGreen);
+            spriteBatch.DrawString(defaultFont, "MA Coins : " + stringCoinsAmount, new Vector2(110, 15), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Wood : " + stringWoodAmount, new Vector2(110, 55), Color.Brown);
+            spriteBatch.DrawString(defaultFont, "Stone : " + stringStoneAmount, new Vector2(110, 105), Color.Gray);
+            spriteBatch.DrawString(defaultFont, "Gems : " + stringGemsAmount, new Vector2(110, 155), Color.Red);
+            spriteBatch.DrawString(defaultFont, "Treasures : " + stringTreasuresAmount, new Vector2(110, 205), Color.Gold);
 
             foreach (MenuButton button in menuButtons)
             {

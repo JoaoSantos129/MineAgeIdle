@@ -4,34 +4,34 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/Fonts/DefaultFont.spritefont</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/ButtonFrame.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Casino/GambleButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/Axe.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/AxeIcon.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/BreakButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/BuyAxeButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/ForestBackground.jpeg</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/BuyShovelButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/IslandBackground.jpeg</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/Shovel.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/CasinoButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ForestButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/IslandButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/MineButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/MountainButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/QuitButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ShopButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/MenuBackground.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mine/BuyTNTButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/BuyPickaxeButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/MountainBackground.jpeg</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/Pickaxe.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Shop/ShopBackground.jpeg</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Start/StartBackground.jpeg</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Take.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UnlockButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UpgradesButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/Fonts/DefaultFont.spritefont</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/ButtonFrame.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Casino/GambleButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/Axe.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/AxeIcon.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/BreakButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/BuyAxeButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/ForestBackground.jpeg</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/BuyShovelButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/IslandBackground.jpeg</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/Shovel.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/CasinoButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ForestButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/IslandButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/MineButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/MountainButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/QuitButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ShopButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/MenuBackground.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mine/BuyTNTButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/BuyPickaxeButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/MountainBackground.jpeg</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/Pickaxe.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Shop/ShopBackground.jpeg</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Start/StartBackground.jpeg</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Take.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UnlockButton.png</File>
+    <File>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UpgradesButton.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

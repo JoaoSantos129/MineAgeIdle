@@ -53,7 +53,7 @@ namespace MineAgeIdle
             forestButtons.Add(breakButtonSprite);
 
             Texture2D axeTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
+            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)

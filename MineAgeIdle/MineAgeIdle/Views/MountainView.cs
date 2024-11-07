@@ -38,14 +38,14 @@ namespace MineAgeIdle
             mountainBackgroundSprite = new ScaledSprite(mountainBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
             Texture2D buyPickaxeButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
-            buyPickaxeButtonFrameSprite = new ScaledSprite(buyPickaxeButtonFrameTexture, new Vector2(540, 750), 353, 155);
+            buyPickaxeButtonFrameSprite = new ScaledSprite(buyPickaxeButtonFrameTexture, new Vector2(1240, 750), 353, 155);
 
             Texture2D buyPickaxeButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\BuyPickaxeButton");
             MountainButton buyPickaxeButtonSprite = new MountainButton(buyPickaxeButtonTexture, new Vector2((buyPickaxeButtonFrameSprite.Width / 2) - (318 / 2) + buyPickaxeButtonFrameSprite.position.X, 10 + buyPickaxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
             mountainButtons.Add(buyPickaxeButtonSprite);
 
             Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
-            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
+            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(90), 10f, 90f, true);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -56,8 +56,8 @@ namespace MineAgeIdle
             spriteBatch.Draw(mountainBackgroundSprite.texture, mountainBackgroundSprite.Rect, Color.White);
             spriteBatch.Draw(buyPickaxeButtonFrameSprite.texture, buyPickaxeButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "Pickaxes : " + stringPickaxesAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "Pickaxe price : " + stringNextPickaxePrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Pickaxes : " + stringPickaxesAmount, new Vector2(buyPickaxeButtonFrameSprite.position.X + 25, buyPickaxeButtonFrameSprite.position.Y + 70), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Pickaxe price : " + stringNextPickaxePrice, new Vector2(buyPickaxeButtonFrameSprite.position.X + 25, buyPickaxeButtonFrameSprite.position.Y + 110), Color.Black);
 
             foreach (MountainButton button in mountainButtons)
             {
