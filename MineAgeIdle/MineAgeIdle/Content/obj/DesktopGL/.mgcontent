@@ -13,6 +13,8 @@
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/BuyAxeButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/ForestBackground.jpeg</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/BuyShovelButton.png</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/IslandBackground.jpeg</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Island/Shovel.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/CasinoButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ForestButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/IslandButton.png</File>
@@ -23,13 +25,19 @@
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/MenuBackground.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mine/BuyTNTButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/BuyPickaxeButton.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Shop/ShopBackground.png</File>
-    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Start/StartBackground.png</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/MountainBackground.jpeg</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/Pickaxe.png</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Shop/ShopBackground.jpeg</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Start/StartBackground.jpeg</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Take.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UnlockButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UpgradesButton.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

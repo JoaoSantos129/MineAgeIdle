@@ -34,8 +34,7 @@ namespace MineAgeIdle
 
         private void LoadContent()
         {
-            //Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\IslandBackground");
-            Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Start\\StartBackground");
+            Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\IslandBackground");
             islandBackgroundSprite = new ScaledSprite(islandBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
             Texture2D buyShovelButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
@@ -45,8 +44,7 @@ namespace MineAgeIdle
             IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
             islandButtons.Add(buyShovelButtonSprite);
 
-            //Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
-            Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
             shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
         }
 

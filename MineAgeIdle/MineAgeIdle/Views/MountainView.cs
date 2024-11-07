@@ -34,8 +34,7 @@ namespace MineAgeIdle
 
         private void LoadContent()
         {
-            //Texture2D mountainBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\MountainBackground");
-            Texture2D mountainBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Start\\StartBackground");
+            Texture2D mountainBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\MountainBackground");
             mountainBackgroundSprite = new ScaledSprite(mountainBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
             Texture2D buyPickaxeButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
@@ -45,8 +44,7 @@ namespace MineAgeIdle
             MountainButton buyPickaxeButtonSprite = new MountainButton(buyPickaxeButtonTexture, new Vector2((buyPickaxeButtonFrameSprite.Width / 2) - (318 / 2) + buyPickaxeButtonFrameSprite.position.X, 10 + buyPickaxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
             mountainButtons.Add(buyPickaxeButtonSprite);
 
-            //Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
-            Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
             pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 10f, 90f);
         }
 

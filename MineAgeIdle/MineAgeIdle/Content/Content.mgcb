@@ -116,6 +116,30 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Island/BuyShovelButton.png
 
+#begin HUD/Island/IslandBackground.jpeg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Island/IslandBackground.jpeg
+
+#begin HUD/Island/Shovel.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Island/Shovel.png
+
 #begin HUD/Menu/Buttons/CasinoButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -236,7 +260,7 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Mountain/BuyPickaxeButton.png
 
-#begin HUD/Shop/ShopBackground.png
+#begin HUD/Mountain/MountainBackground.jpeg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -246,9 +270,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:HUD/Shop/ShopBackground.png
+/build:HUD/Mountain/MountainBackground.jpeg
 
-#begin HUD/Start/StartBackground.png
+#begin HUD/Mountain/Pickaxe.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -258,7 +282,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:HUD/Start/StartBackground.png
+/build:HUD/Mountain/Pickaxe.png
+
+#begin HUD/Shop/ShopBackground.jpeg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Shop/ShopBackground.jpeg
+
+#begin HUD/Start/StartBackground.jpeg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Start/StartBackground.jpeg
 
 #begin HUD/Take.png
 /importer:TextureImporter
