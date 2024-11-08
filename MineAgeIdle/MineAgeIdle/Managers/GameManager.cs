@@ -101,7 +101,7 @@ namespace MineAgeIdle
 
             // Initialize sprites for continuous rotation and harvesting
             Texture2D shovelTexture = Content.Load<Texture2D>("HUD\\Island\\Shovel");
-            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 64, 250, Color.White, Color.Transparent, 0f, 20f, 90f, false);
         }
 
         protected override void Update(GameTime gameTime)
