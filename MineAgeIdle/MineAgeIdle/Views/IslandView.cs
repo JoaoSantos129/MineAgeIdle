@@ -6,6 +6,7 @@ using System.Drawing;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 using Color = Microsoft.Xna.Framework.Color;
 using System;
+using System.Reflection.Metadata;
 
 namespace MineAgeIdle
 {
@@ -63,6 +64,12 @@ namespace MineAgeIdle
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
             }
+
+            if (gameManager.shovelsAmount > 0)
+            {
+                shovelSprite.Update(); // Ensure Update is called
+                shovelSprite.Draw(spriteBatch); // Draw using the new Draw method
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -103,19 +110,6 @@ namespace MineAgeIdle
                 if (mouseState.LeftButton == ButtonState.Released)
                 {
                     isLeftMousePressed = false;
-                }
-            }
-
-            if (gameManager.shovelsAmount > 0)
-            {
-                // Update the shovel's position using the Update method of MovingSprite
-                shovelSprite.Update();
-
-                // Increment treasuresAmount if the shovel has completed a rotation
-                if (shovelSprite.hasDoneRotation)
-                {
-                    gameManager.treasuresAmount += gameManager.shovelsAmount; // Increment treasure amount
-                    shovelSprite.ResetRotation(); // Reset rotation status if needed
                 }
             }
         }

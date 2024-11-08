@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/CasinoButton.png</SourceFile>
-  <SourceTime>2024-10-23T14:15:45.5737104+02:00</SourceTime>
-  <DestFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/Menu/Buttons/CasinoButton.xnb</DestFile>
-  <DestTime>2024-11-08T13:59:40.6613211+01:00</DestTime>
+  <SourceFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/CasinoButton.png</SourceFile>
+  <SourceTime>2024-10-30T19:14:35.5926324+01:00</SourceTime>
+  <DestFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/Menu/Buttons/CasinoButton.xnb</DestFile>
+  <DestTime>2024-11-08T18:36:24.616403+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

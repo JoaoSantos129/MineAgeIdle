@@ -6,6 +6,7 @@ using System.Drawing;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 using Color = Microsoft.Xna.Framework.Color;
 using System;
+using System.Reflection.Metadata;
 
 namespace MineAgeIdle
 {
@@ -14,7 +15,7 @@ namespace MineAgeIdle
         ScaledSprite mineBackgroundSprite;
         ScaledSprite buyTntMachineButtonFrameSprite;
         List<MineButton> mineButtons = new List<MineButton>();
-        ColoredSprite tntMachine;
+        MovingSprite tntMachineSprite;
         MovingSprite tntSprite;
 
         private GameManager gameManager;
@@ -47,9 +48,9 @@ namespace MineAgeIdle
             MineButton buyTntMachineButtonSprite = new MineButton(buyTntMachineButtonTexture, new Vector2((buyTntMachineButtonFrameSprite.Width / 2) - (318 / 2) + buyTntMachineButtonFrameSprite.position.X, 10 + buyTntMachineButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
             mineButtons.Add(buyTntMachineButtonSprite);
 
-            //Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\TNT");
-            Texture2D TntTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            tntSprite = new MovingSprite(TntTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
+            //Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
+            Texture2D tntMachineTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            tntMachineSprite = new MovingSprite(tntMachineTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -66,6 +67,12 @@ namespace MineAgeIdle
             foreach (MineButton button in mineButtons)
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
+            }
+
+            if (gameManager.tntMachinesAmount > 0)
+            {
+                tntMachineSprite.Update(); // Ensure Update is called
+                tntMachineSprite.Draw(spriteBatch); // Draw using the new Draw method
             }
         }
 
@@ -107,19 +114,6 @@ namespace MineAgeIdle
                 if (mouseState.LeftButton == ButtonState.Released)
                 {
                     isLeftMousePressed = false;
-                }
-            }
-
-            if (gameManager.tntMachinesAmount > 0)
-            {
-                // Update the tnt's position using the Update method of MovingSprite
-                tntSprite.Update();
-
-                // Increment gemsAmount if the tnt has completed a rotation
-                if (tntSprite.hasDoneRotation)
-                {
-                    gameManager.gemsAmount += gameManager.tntMachinesAmount; // Increment gems amount
-                    tntSprite.ResetRotation(); // Reset rotation status if needed
                 }
             }
         }

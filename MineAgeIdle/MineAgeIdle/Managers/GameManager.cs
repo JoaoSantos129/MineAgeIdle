@@ -13,6 +13,12 @@ namespace MineAgeIdle
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont;
 
+        private MovingSprite axeSprite;
+        private MovingSprite pickaxeSprite;
+        private MovingSprite tntMachineSprite;
+        private MovingSprite tntSprite;
+        private MovingSprite shovelSprite;
+
         private double elapsedTime = 0.0; // Variable to track elapsed time for continue button
         private bool tick = true; // Initial continue button visibility state
 
@@ -71,7 +77,7 @@ namespace MineAgeIdle
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Views
+            // Initialize views
             startView = new StartView();
             menuView = new MenuView();
             shopView = new ShopView();
@@ -80,6 +86,22 @@ namespace MineAgeIdle
             mineView = new MineView();
             islandView = new IslandView();
             casinoView = new CasinoView();
+
+            // Initialize sprites for continuous rotation and harvesting
+            Texture2D axeTexture = Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 15f, 90f, false);
+
+            Texture2D pickaxeTexture = Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
+            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(80), 10f, 90f, true);
+
+            // Initialize sprites for continuous rotation and harvesting
+            //Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
+            Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Forest\\Axe");
+            tntMachineSprite = new MovingSprite(tntMachineTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
+
+            // Initialize sprites for continuous rotation and harvesting
+            Texture2D shovelTexture = Content.Load<Texture2D>("HUD\\Island\\Shovel");
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
         }
 
         protected override void Update(GameTime gameTime)
@@ -90,8 +112,6 @@ namespace MineAgeIdle
             // Update the elapsed time
             elapsedTime += gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            //
-
             // Check if one second has passed
             if (elapsedTime >= Constants.TICK_DURATION)
             {
@@ -101,6 +121,9 @@ namespace MineAgeIdle
                 // Reset the elapsed time
                 elapsedTime = 0.0;
             }
+
+            // Harvest resources based on rotation completion
+            HarvestResources();
 
             switch (_currentView)
             {
@@ -178,7 +201,7 @@ namespace MineAgeIdle
             base.Draw(gameTime);
         }
 
-        public float CalculatePrice (float price)
+        public float CalculatePrice(float price)
         {
             return price * Constants.INFLATION_MULTIPLIYER;
         }
@@ -218,25 +241,48 @@ namespace MineAgeIdle
 
         private void HarvestResources()
         {
-            // Harvest resourcess based on the number of tools
+            // Check if axeSprite has completed a rotation for wood harvesting
             if (axesAmount > 0)
             {
-                woodAmount += axesAmount;
+                axeSprite.Update(); // Update rotation
+                if (axeSprite.hasDoneRotation)
+                {
+                    woodAmount += axesAmount; // Harvest wood
+                    axeSprite.ResetRotation();
+                }
             }
 
+            // Check if pickaxeSprite has completed a rotation for stone harvesting
             if (pickaxesAmount > 0)
             {
-                stoneAmount += pickaxesAmount;
+                pickaxeSprite.Update(); // Update rotation
+                if (pickaxeSprite.hasDoneRotation)
+                {
+                    stoneAmount += pickaxesAmount; // Harvest stone
+                    pickaxeSprite.ResetRotation();
+                }
             }
 
+            // Check if tntMachineSprite has completed a rotation for gem harvesting
             if (tntMachinesAmount > 0)
             {
-                gemsAmount += tntMachinesAmount;
+                tntMachineSprite.Update(); // Update rotation
+                if (tntMachineSprite.hasDoneRotation)
+                {
+                    gemsAmount += tntMachinesAmount; // Harvest gem
+                    tntMachineSprite.ResetRotation();
+                }
             }
 
+            // Check if shovelSprite has completed a rotation for treasure harvesting
             if (shovelsAmount > 0)
             {
-                treasuresAmount += shovelsAmount;
+                shovelSprite.Update(); // Update rotation
+                if (shovelSprite.hasDoneRotation)
+                {
+                    treasuresAmount += shovelsAmount; // Harvest treasure
+                    shovelSprite.ResetRotation();
+                }
             }
         }
     }

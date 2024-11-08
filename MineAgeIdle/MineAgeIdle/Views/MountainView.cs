@@ -63,6 +63,12 @@ namespace MineAgeIdle
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
             }
+
+            if (gameManager.pickaxesAmount > 0)
+            {
+                pickaxeSprite.Update(); // Ensure Update is called
+                pickaxeSprite.Draw(spriteBatch); // Draw using the new Draw method
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -103,19 +109,6 @@ namespace MineAgeIdle
                 if (mouseState.LeftButton == ButtonState.Released)
                 {
                     isLeftMousePressed = false;
-                }
-            }
-
-            if (gameManager.pickaxesAmount > 0)
-            {
-                // Update the pickaxe's position using the Update method of MovingSprite
-                pickaxeSprite.Update();
-
-                // Increment stoneAmount if the pickaxe has completed a rotation
-                if (pickaxeSprite.hasDoneRotation)
-                {
-                    gameManager.stoneAmount += gameManager.pickaxesAmount; // Increment stone amount
-                    pickaxeSprite.ResetRotation(); // Reset rotation status if needed
                 }
             }
         }

@@ -72,6 +72,12 @@ namespace MineAgeIdle
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
             }
+
+            if (gameManager.axesAmount > 0)
+            {
+                axeSprite.Update(); // Ensure Update is called
+                axeSprite.Draw(spriteBatch); // Draw using the new Draw method
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -112,19 +118,6 @@ namespace MineAgeIdle
                 if (mouseState.LeftButton == ButtonState.Released)
                 {
                     isLeftMousePressed = false;
-                }
-            }
-
-            if (gameManager.axesAmount > 0)
-            {
-                // Update the axe's position using the Update method of MovingSprite
-                axeSprite.Update();
-
-                // Increment woodAmount if the axe has completed a rotation
-                if (axeSprite.hasDoneRotation)
-                {
-                    gameManager.woodAmount += gameManager.axesAmount; // Increment wood amount
-                    axeSprite.ResetRotation(); // Reset rotation status if needed
                 }
             }
         }
