@@ -12,6 +12,7 @@ namespace MineAgeIdle
     {
         protected float rotation; // Add a rotation property
         protected float rotationSpeed; // Optional: Speed of rotation
+        private float initialRotation; // Track the initial rotation for resetting
         private float targetRotation; // Target rotation in radians
         private bool isReversing; // Determines if the rotation is reversing
         private float rotationAmount; // Amount of rotation in degrees
@@ -22,6 +23,7 @@ namespace MineAgeIdle
             : base(texture, position, width, height, color, backgroundColor)
         {
             this.rotation = rotation;
+            this.initialRotation = rotation; // Save the starting rotation
             this.rotationSpeed = rotationSpeed; // Initialize rotation speed
             this.rotationAmount = rotationAmount; // Set the desired rotation amount
             this.targetRotation = MathHelper.ToRadians(rotationAmount); // Convert rotation amount to radians
@@ -43,9 +45,9 @@ namespace MineAgeIdle
                 rotation -= direction * rotationSpeed / 1000;
 
                 // Stop reversing once we reach or go below zero rotation
-                if ((reverseRotation && rotation >= 0) || (!reverseRotation && rotation <= 0))
+                if ((reverseRotation && rotation >= initialRotation) || (!reverseRotation && rotation <= initialRotation))
                 {
-                    rotation = 0; // Clamp the rotation to zero
+                    rotation = initialRotation; // Reset to the initial rotation
                     isReversing = false; // Stop reversing
                     hasDoneRotation = false; // Reset the completion flag
                 }
@@ -56,10 +58,10 @@ namespace MineAgeIdle
                 rotation += direction * rotationSpeed / 1000;
 
 
-                // Once we reach the target rotation (90 degrees), start reversing
-                if ((reverseRotation && rotation <= -targetRotation) || (!reverseRotation && rotation >= targetRotation))
+                // Once we reach the target rotation, prepare to reverse
+                if ((reverseRotation && rotation <= initialRotation - targetRotation) || (!reverseRotation && rotation >= initialRotation + targetRotation))
                 {
-                    rotation = reverseRotation ? -targetRotation : targetRotation; // Clamp to the target rotation
+                    rotation = reverseRotation ? initialRotation - targetRotation : initialRotation + targetRotation;
                     isReversing = true; // Start reversing
 
                     if (!hasDoneRotation) // Increment only once

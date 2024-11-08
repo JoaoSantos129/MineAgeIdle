@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/ForestBackground.jpeg</SourceFile>
-  <SourceTime>2024-11-07T19:22:27.6468052+01:00</SourceTime>
-  <DestFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/Forest/ForestBackground.xnb</DestFile>
-  <DestTime>2024-11-07T22:19:15.6316427+01:00</DestTime>
+  <SourceFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Forest/ForestBackground.jpeg</SourceFile>
+  <SourceTime>2024-11-07T12:03:39.6358642+01:00</SourceTime>
+  <DestFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/Forest/ForestBackground.xnb</DestFile>
+  <DestTime>2024-11-08T13:59:40.4741788+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -90,6 +90,8 @@ namespace MineAgeIdle
             // Update the elapsed time
             elapsedTime += gameTime.ElapsedGameTime.TotalMilliseconds;
 
+            //
+
             // Check if one second has passed
             if (elapsedTime >= Constants.TICK_DURATION)
             {
@@ -212,6 +214,30 @@ namespace MineAgeIdle
             }
 
             return formattedAmount;
+        }
+
+        private void HarvestResources()
+        {
+            // Harvest resourcess based on the number of tools
+            if (axesAmount > 0)
+            {
+                woodAmount += axesAmount;
+            }
+
+            if (pickaxesAmount > 0)
+            {
+                stoneAmount += pickaxesAmount;
+            }
+
+            if (tntMachinesAmount > 0)
+            {
+                gemsAmount += tntMachinesAmount;
+            }
+
+            if (shovelsAmount > 0)
+            {
+                treasuresAmount += shovelsAmount;
+            }
         }
     }
 }

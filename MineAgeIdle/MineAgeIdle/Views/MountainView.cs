@@ -45,7 +45,7 @@ namespace MineAgeIdle
             mountainButtons.Add(buyPickaxeButtonSprite);
 
             Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
-            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(90), 10f, 90f, true);
+            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(80), 10f, 90f, true);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -62,12 +62,6 @@ namespace MineAgeIdle
             foreach (MountainButton button in mountainButtons)
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
-            }
-
-            if (gameManager.pickaxesAmount > 0)
-            {
-                pickaxeSprite.Update(); // Ensure Update is called
-                pickaxeSprite.Draw(spriteBatch); // Draw using the new Draw method
             }
         }
 
