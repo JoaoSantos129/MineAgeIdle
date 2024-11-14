@@ -46,7 +46,7 @@ namespace MineAgeIdle
             islandButtons.Add(buyShovelButtonSprite);
 
             Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
-            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1370, 620), 64, 250, Color.White, Color.Transparent, 0f, 20f, 90f, false);
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1800, 850), 268, 250, Color.White, Color.Transparent, 0f, 3f, 25f, true);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)

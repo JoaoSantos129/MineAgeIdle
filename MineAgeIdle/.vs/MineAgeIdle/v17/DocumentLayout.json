@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\forestview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\islandview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\islandview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\viewmodels\\movingsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\viewmodels\\movingsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\mineview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\mineview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\mountainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\mountainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,8 +23,16 @@
       "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\viewmodels\\movingsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\viewmodels\\movingsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\mountainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\mountainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|c:\\users\\joao.santos\\onedrive - imd business school\\documents\\private\\mineageidle\\mineageidle\\mineageidle\\views\\islandview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AD70F7-5651-4CF9-BCB6-FBD9A7CB093E}|MineAgeIdle\\MineAgeIdle.csproj|solutionrelative:mineageidle\\views\\islandview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,13 +46,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\Managers\\GameManager.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Managers\\GameManager.cs",
               "RelativeToolTip": "MineAgeIdle\\Managers\\GameManager.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAuwNwAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAmwFMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:44:15.399Z",
               "IsPinned": true,
@@ -60,13 +60,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Constants.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Constants.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\Constants.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Constants.cs",
               "RelativeToolTip": "MineAgeIdle\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:44:11.656Z",
               "IsPinned": true,
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MenuView.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\MenuView.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\Views\\MenuView.cs",
@@ -94,7 +94,7 @@
               "RelativeDocumentMoniker": "MineAgeIdle\\Views\\ForestView.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\ForestView.cs",
               "RelativeToolTip": "MineAgeIdle\\Views\\ForestView.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAuwEkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T14:19:19.473Z",
               "IsPinned": true,
@@ -102,13 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MountainView.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\MountainView.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\Views\\MountainView.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\MountainView.cs",
               "RelativeToolTip": "MineAgeIdle\\Views\\MountainView.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswEAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T14:01:47.359Z",
               "IsPinned": true,
@@ -122,7 +122,7 @@
               "RelativeDocumentMoniker": "MineAgeIdle\\Views\\MineView.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\MineView.cs",
               "RelativeToolTip": "MineAgeIdle\\Views\\MineView.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAQwEQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T14:01:57.371Z",
               "IsPinned": true,
@@ -130,13 +130,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "IslandView.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\IslandView.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\Views\\IslandView.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\Views\\IslandView.cs",
               "RelativeToolTip": "MineAgeIdle\\Views\\IslandView.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwEAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T13:15:11.303Z",
               "IsPinned": true,
@@ -144,13 +144,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "MovingSprite.cs",
               "DocumentMoniker": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\ViewModels\\MovingSprite.cs",
               "RelativeDocumentMoniker": "MineAgeIdle\\ViewModels\\MovingSprite.cs",
               "ToolTip": "C:\\Users\\joao.santos\\OneDrive - IMD Business School\\Documents\\Private\\MineAgeIdle\\MineAgeIdle\\MineAgeIdle\\ViewModels\\MovingSprite.cs",
               "RelativeToolTip": "MineAgeIdle\\ViewModels\\MovingSprite.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAYwEAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:02:05.294Z",
               "EditorCaption": ""

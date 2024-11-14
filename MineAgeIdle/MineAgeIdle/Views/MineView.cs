@@ -36,8 +36,7 @@ namespace MineAgeIdle
 
         private void LoadContent()
         {
-            //Texture2D mineBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\MineBackground");
-            Texture2D mineBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Start\\StartBackground");
+            Texture2D mineBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\MineBackground");
             mineBackgroundSprite = new ScaledSprite(mineBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
             Texture2D buyTntMachineButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");

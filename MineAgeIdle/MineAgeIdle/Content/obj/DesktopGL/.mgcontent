@@ -24,6 +24,7 @@
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/Buttons/ShopButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Menu/MenuBackground.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mine/BuyTNTButton.png</File>
+    <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mine/MineBackground.jpeg</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/BuyPickaxeButton.png</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/MountainBackground.jpeg</File>
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/Mountain/Pickaxe.png</File>
@@ -34,6 +35,7 @@
     <File>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UpgradesButton.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
