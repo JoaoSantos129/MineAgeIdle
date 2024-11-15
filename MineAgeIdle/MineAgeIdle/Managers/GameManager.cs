@@ -15,7 +15,7 @@ namespace MineAgeIdle
 
         private MovingSprite axeSprite;
         private MovingSprite pickaxeSprite;
-        private MovingSprite tntMachineSprite;
+        private ScaledSprite tntMachineSprite;
         private MovingSprite tntSprite;
         private MovingSprite shovelSprite;
 
@@ -31,6 +31,7 @@ namespace MineAgeIdle
         public double stoneAmount { get; set; } = 0;
         public double tntMachinesAmount { get; set; } = 0;
         public double gemsAmount { get; set; } = 0;
+        public bool hasTriggeredGemCollection { get; set; } = false;
         public double shovelsAmount { get; set; } = 0;
         public double treasuresAmount { get; set; } = 0;
         public double coinsAmount { get; set; } = 100f;
@@ -89,19 +90,16 @@ namespace MineAgeIdle
 
             // Initialize sprites for continuous rotation and harvesting
             Texture2D axeTexture = Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 15f, 90f, false);
+            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 15f, 90f, false, 0f, 1370f, 0f, false, 0f, 620f, false);
 
             Texture2D pickaxeTexture = Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
-            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(80), 10f, 90f, true);
+            pickaxeSprite = new MovingSprite(pickaxeTexture, new Vector2(760, 760), 150, 150, Color.White, Color.Transparent, MathHelper.ToRadians(80), 10f, 90f, true, 0f, 760f, 0f, false, 0f, 760f, false);
 
-            // Initialize sprites for continuous rotation and harvesting
-            //Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
-            Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            tntMachineSprite = new MovingSprite(tntMachineTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
+            Texture2D tntTexture = Content.Load<Texture2D>("HUD\\Mine\\Tnt");
+            tntSprite = new MovingSprite(tntTexture, new Vector2(1750, 600), 150, 150, Color.White, Color.Transparent, 0f, 22f, 50f, false, 6f, 1750f, 700f, true, 1f, 600f, false);
 
-            // Initialize sprites for continuous rotation and harvesting
             Texture2D shovelTexture = Content.Load<Texture2D>("HUD\\Island\\Shovel");
-            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1800, 850), 268, 250, Color.White, Color.Transparent, 0f, 3f, 25f, true);
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1800, 850), 268, 250, Color.White, Color.Transparent, 0f, 3f, 25f, true, 0f, 1800f, 0f, false, 0f, 850f, false);
         }
 
         protected override void Update(GameTime gameTime)
@@ -263,14 +261,25 @@ namespace MineAgeIdle
                 }
             }
 
-            // Check if tntMachineSprite has completed a rotation for gem harvesting
+            // Check if TNT has completed a rotation for gem harvesting
             if (tntMachinesAmount > 0)
             {
-                tntMachineSprite.Update(); // Update rotation
-                if (tntMachineSprite.hasDoneRotation)
+                tntSprite.Update(); // Update TNT sprite position
+
+                if (tntSprite.HasReachedFinalPosition && !hasTriggeredGemCollection)
                 {
-                    gemsAmount += tntMachinesAmount; // Harvest gem
-                    tntMachineSprite.ResetRotation();
+                    // Collect gems immediately after TNT reaches its final position
+                    gemsAmount += tntMachinesAmount;
+                    hasTriggeredGemCollection = true;
+
+                    // Reset TNT for next cycle
+                    tntSprite.ResetPosition();
+                    tntSprite.HasReachedFinalPosition = false; // Ensure the flag is reset for the next cycle
+                }
+                else if (!tntSprite.HasReachedFinalPosition)
+                {
+                    // If TNT hasn't reached its final position, reset the flag
+                    hasTriggeredGemCollection = false;
                 }
             }
 

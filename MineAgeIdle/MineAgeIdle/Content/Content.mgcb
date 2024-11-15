@@ -56,18 +56,6 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Forest/Axe.png
 
-#begin HUD/Forest/AxeIcon.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:HUD/Forest/AxeIcon.png
-
 #begin HUD/Forest/BreakButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -236,7 +224,7 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Menu/MenuBackground.png
 
-#begin HUD/Mine/BuyTNTButton.png
+#begin HUD/Mine/BuyTntMachineButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -246,7 +234,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:HUD/Mine/BuyTNTButton.png
+/build:HUD/Mine/BuyTntMachineButton.png
 
 #begin HUD/Mine/MineBackground.jpeg
 /importer:TextureImporter
@@ -259,6 +247,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:HUD/Mine/MineBackground.jpeg
+
+#begin HUD/Mine/Tnt.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Mine/Tnt.png
+
+#begin HUD/Mine/TntMachine.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Mine/TntMachine.png
 
 #begin HUD/Mountain/BuyPickaxeButton.png
 /importer:TextureImporter

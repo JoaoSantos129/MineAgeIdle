@@ -41,13 +41,11 @@ C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdl
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\BreakButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\BuyAxeButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\BuyShovelButton.xnb
-C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTNTButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\BuyPickaxeButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Take.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\UnlockButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\UpgradesButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\Axe.xnb
-C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\AxeIcon.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\Fonts\DefaultFont.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\ButtonFrame.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Casino\GambleButton.xnb
@@ -107,3 +105,6 @@ D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\Shove
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\MountainBackground.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\Pickaxe.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\MineBackground.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\Tnt.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\TntMachine.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTntMachineButton.xnb

@@ -53,7 +53,7 @@ namespace MineAgeIdle
             forestButtons.Add(breakButtonSprite);
 
             Texture2D axeTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 15f, 90f, false);
+            axeSprite = new MovingSprite(axeTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 15f, 90f, false, 0f, 1370f, 0f, false, 0f, 620f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -65,8 +65,8 @@ namespace MineAgeIdle
             spriteBatch.Draw(breakButtonFrameSprite.texture, breakButtonFrameSprite.Rect, Color.White);
             spriteBatch.Draw(buyAxeButtonFrameSprite.texture, buyAxeButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "Axes : " + stringAxesAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "Axe price : " + stringNextAxePrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Axes : " + stringAxesAmount, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 70), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Axe price : " + stringNextAxePrice, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 110), Color.Black);
 
             foreach (ForestButton button in forestButtons)
             {
@@ -133,7 +133,7 @@ namespace MineAgeIdle
 
         private void ConfirmBuy()
         {
-            if (gameManager.coinsAmount - gameManager.CalculatePrice(axePrice) > 0)
+            if (gameManager.coinsAmount - gameManager.CalculatePrice(axePrice) >= 0)
             {
                 gameManager.axesAmount++;
                 axePrice = gameManager.CalculatePrice(axePrice);

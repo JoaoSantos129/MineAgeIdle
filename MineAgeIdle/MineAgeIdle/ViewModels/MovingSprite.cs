@@ -18,8 +18,18 @@ namespace MineAgeIdle
         private float rotationAmount; // Amount of rotation in degrees
         public bool hasDoneRotation; // Determines when sprite has done a full rotation
         private bool reverseRotation; // If true the sprite will start with a right to left rotation
+        private float xSpeed;
+        private float initialXPosition;
+        private float currentXPosition;
+        private float finalXPosition;
+        private bool reverseXMove;
+        private float ySpeed;
+        private float initialYPosition;
+        private float currentYPosition;
+        private bool reverseYMove;
+        public bool HasReachedFinalPosition { get; set; } = false;
 
-        public MovingSprite(Texture2D texture, Vector2 position, int width, int height, Color color, Color backgroundColor, float rotation, float rotationSpeed, float rotationAmount, bool reverseRotation)
+        public MovingSprite(Texture2D texture, Vector2 position, int width, int height, Color color, Color backgroundColor, float rotation, float rotationSpeed, float rotationAmount, bool reverseRotation, float xSpeed, float currentXPosition, float finalXPosition, bool reverseXMove, float ySpeed, float currentYPosition, bool reverseYMove)
             : base(texture, position, width, height, color, backgroundColor)
         {
             this.rotation = rotation;
@@ -30,11 +40,55 @@ namespace MineAgeIdle
             this.isReversing = false; // Initially, it is not reversing
             this.hasDoneRotation = false; // Initially, has not completed a rotation
             this.reverseRotation = reverseRotation;
-        }
+            this.xSpeed = xSpeed;
+            this.ySpeed = ySpeed;
+            this.initialXPosition = currentXPosition;
+            this.initialYPosition = currentYPosition;
+            this.currentXPosition = currentXPosition;
+            this.currentYPosition = currentYPosition;
+            this.finalXPosition = finalXPosition;
+            this.reverseXMove = reverseXMove;
+            this.reverseYMove = reverseYMove;
+    }
 
         public override void Update()
         {
             base.Update();
+
+            // Update X position
+            if (reverseXMove)
+            {
+                if (currentXPosition > finalXPosition)
+                    currentXPosition -= xSpeed;
+                else
+                    currentXPosition = finalXPosition; // Snap to final position
+            }
+            else
+            {
+                if (currentXPosition < finalXPosition)
+                    currentXPosition += xSpeed;
+                else
+                    currentXPosition = finalXPosition; // Snap to final position
+            }
+
+            // Update Y position
+            if (reverseYMove)
+            {
+                currentYPosition -= ySpeed;
+            }
+            else
+            {
+                currentYPosition += ySpeed;
+            }
+
+            // Update the sprite's position
+            position = new Vector2(currentXPosition, currentYPosition);
+
+            // Check if X has reached it's final position
+            if (currentXPosition == finalXPosition)
+            {
+                HasReachedFinalPosition = true; // Both X and Y have reached the target
+            }
 
             float direction = reverseRotation ? -1 : 1; // Determine rotation direction
 
@@ -89,6 +143,15 @@ namespace MineAgeIdle
         public void ResetRotation()
         {
             hasDoneRotation = false; // Reset the completion flag
+        }
+
+        public void ResetPosition()
+        {
+            // Reset the position to the initial starting values
+            currentXPosition = initialXPosition; // Set to the starting X position
+            currentYPosition = initialYPosition; // Set to the starting Y position
+            position = new Vector2(currentXPosition, currentYPosition); // Update the position vector
+            HasReachedFinalPosition = false; // Reset the final position flag
         }
     }
 }

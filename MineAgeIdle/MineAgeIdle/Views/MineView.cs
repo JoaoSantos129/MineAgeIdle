@@ -15,7 +15,7 @@ namespace MineAgeIdle
         ScaledSprite mineBackgroundSprite;
         ScaledSprite buyTntMachineButtonFrameSprite;
         List<MineButton> mineButtons = new List<MineButton>();
-        MovingSprite tntMachineSprite;
+        ScaledSprite tntMachineSprite;
         MovingSprite tntSprite;
 
         private GameManager gameManager;
@@ -24,6 +24,9 @@ namespace MineAgeIdle
         private bool isLeftMousePressed;
 
         private float tntMachinePrice = 10;
+        private float tntReappearDelay = 1000f; // 1 second delay before TNT reappears
+        private float tntDisappearTimer = 0f;
+        private bool tntHidden = false;
 
         public MineView()
         {
@@ -40,16 +43,17 @@ namespace MineAgeIdle
             mineBackgroundSprite = new ScaledSprite(mineBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
             Texture2D buyTntMachineButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
-            buyTntMachineButtonFrameSprite = new ScaledSprite(buyTntMachineButtonFrameTexture, new Vector2(540, 750), 353, 155);
+            buyTntMachineButtonFrameSprite = new ScaledSprite(buyTntMachineButtonFrameTexture, new Vector2(1500, 50), 353, 155);
 
-            //Texture2D buyTntMachineButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\BuyTntMachineButtonButton");
-            Texture2D buyTntMachineButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\BuyAxeButton");
+            Texture2D buyTntMachineButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\BuyTntMachineButton");
             MineButton buyTntMachineButtonSprite = new MineButton(buyTntMachineButtonTexture, new Vector2((buyTntMachineButtonFrameSprite.Width / 2) - (318 / 2) + buyTntMachineButtonFrameSprite.position.X, 10 + buyTntMachineButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
             mineButtons.Add(buyTntMachineButtonSprite);
 
-            //Texture2D tntMachineTexture = Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
-            Texture2D tntMachineTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\Axe");
-            tntMachineSprite = new MovingSprite(tntMachineTexture, new Vector2(1370, 620), 150, 150, Color.White, Color.Transparent, 0f, 5f, 90f, false);
+            Texture2D tntMachineTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
+            tntMachineSprite = new ScaledSprite(tntMachineTexture, new Vector2(1370, 500), 150, 150);
+
+            Texture2D tntTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\Tnt");
+            tntSprite = new MovingSprite(tntTexture, new Vector2(1750, 600), 150, 150, Color.White, Color.Transparent, 0f, 22f, 50f, false, 6f, 1750f, 700f, true, 1f, 600f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -60,8 +64,8 @@ namespace MineAgeIdle
             spriteBatch.Draw(mineBackgroundSprite.texture, mineBackgroundSprite.Rect, Color.White);
             spriteBatch.Draw(buyTntMachineButtonFrameSprite.texture, buyTntMachineButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "TNT machines : " + stringTntMachineAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "TNT machine price : " + stringNextTntMachinePrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "TNT machines : " + stringTntMachineAmount, new Vector2(buyTntMachineButtonFrameSprite.position.X + 25, buyTntMachineButtonFrameSprite.position.Y + 70), Color.Black);
+            spriteBatch.DrawString(defaultFont, "TNT machine price : " + stringNextTntMachinePrice, new Vector2(buyTntMachineButtonFrameSprite.position.X + 25, buyTntMachineButtonFrameSprite.position.Y + 110), Color.Black);
 
             foreach (MineButton button in mineButtons)
             {
@@ -72,11 +76,18 @@ namespace MineAgeIdle
             {
                 tntMachineSprite.Update(); // Ensure Update is called
                 tntMachineSprite.Draw(spriteBatch); // Draw using the new Draw method
+                tntSprite.Update(); // Ensure Update is called
+                // Draw TNT sprite only if it is not hidden
+                if (!tntHidden)
+                {
+                    tntSprite.Draw(spriteBatch);
+                }
             }
         }
 
         public override void Update(GameTime gameTime)
         {
+            var deltaTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             var mouseState = Mouse.GetState();
 
             UpdateButtonStates();
@@ -114,6 +125,13 @@ namespace MineAgeIdle
                 {
                     isLeftMousePressed = false;
                 }
+            }
+
+            if (tntSprite.HasReachedFinalPosition && !gameManager.hasTriggeredGemCollection)
+            {
+                // Reset TNT for next cycle
+                tntSprite.ResetPosition();
+                tntSprite.HasReachedFinalPosition = false; // Ensure the flag is reset for the next cycle
             }
         }
 

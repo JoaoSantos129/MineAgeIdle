@@ -46,7 +46,7 @@ namespace MineAgeIdle
             islandButtons.Add(buyShovelButtonSprite);
 
             Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
-            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1800, 850), 268, 250, Color.White, Color.Transparent, 0f, 3f, 25f, true);
+            shovelSprite = new MovingSprite(shovelTexture, new Vector2(1800, 850), 268, 250, Color.White, Color.Transparent, 0f, 3f, 25f, true, 0f, 1800f, 0f, false, 0f, 850f, false);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
@@ -57,8 +57,8 @@ namespace MineAgeIdle
             spriteBatch.Draw(islandBackgroundSprite.texture, islandBackgroundSprite.Rect, Color.White);
             spriteBatch.Draw(buyShovelButtonFrameSprite.texture, buyShovelButtonFrameSprite.Rect, Color.White);
 
-            spriteBatch.DrawString(defaultFont, "Shovels : " + stringShovelsAmount, new Vector2(565, 820), Color.Black);
-            spriteBatch.DrawString(defaultFont, "Shovel price : " + stringNextShovelPrice, new Vector2(565, 860), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Shovels : " + stringShovelsAmount, new Vector2(buyShovelButtonFrameSprite.position.X + 25, buyShovelButtonFrameSprite.position.Y + 70), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Shovel price : " + stringNextShovelPrice, new Vector2(buyShovelButtonFrameSprite.position.X + 25, buyShovelButtonFrameSprite.position.Y + 110), Color.Black);
 
             foreach (IslandButton button in islandButtons)
             {
@@ -125,7 +125,7 @@ namespace MineAgeIdle
 
         private void ConfirmBuy()
         {
-            if (gameManager.coinsAmount - gameManager.CalculatePrice(shovelPrice) > 0)
+            if (gameManager.coinsAmount - gameManager.CalculatePrice(shovelPrice) >= 0)
             {
                 gameManager.shovelsAmount++;
                 shovelPrice = gameManager.CalculatePrice(shovelPrice);
