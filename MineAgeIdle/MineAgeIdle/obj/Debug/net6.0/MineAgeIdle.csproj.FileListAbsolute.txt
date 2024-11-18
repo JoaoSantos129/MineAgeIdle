@@ -50,7 +50,6 @@ D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\Fonts\DefaultFon
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\ButtonFrame.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Casino\GambleButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\Axe.xnb
-D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\AxeIcon.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\BreakButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\BuyAxeButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\ForestBackground.xnb
@@ -63,7 +62,6 @@ D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Menu\Buttons
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Menu\Buttons\QuitButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Menu\Buttons\ShopButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Menu\MenuBackground.xnb
-D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTNTButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\BuyPickaxeButton.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\ShopBackground.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Start\StartBackground.xnb
@@ -108,3 +106,7 @@ C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdl
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\Tnt.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\TntMachine.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTntMachineButton.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTntMachineButton.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\MineBackground.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\Tnt.xnb
+D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\TntMachine.xnb

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UnlockButton.png</SourceFile>
-  <SourceTime>2024-10-24T10:13:11.6847104+02:00</SourceTime>
-  <DestFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/UnlockButton.xnb</DestFile>
-  <DestTime>2024-11-14T09:36:42.0693454+01:00</DestTime>
+  <SourceFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/HUD/UnlockButton.png</SourceFile>
+  <SourceTime>2024-10-30T19:14:35.6145735+01:00</SourceTime>
+  <DestFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/HUD/UnlockButton.xnb</DestFile>
+  <DestTime>2024-11-18T20:50:05.8556449+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

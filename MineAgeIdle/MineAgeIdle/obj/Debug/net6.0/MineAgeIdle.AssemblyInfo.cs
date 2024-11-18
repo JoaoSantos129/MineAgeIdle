@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MineAgeIdle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dfb83d2b671858a08cbe16261ae9281194473c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58270f1ba5fcf959b194897507f7188ff0fa7a8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MineAgeIdle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MineAgeIdle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

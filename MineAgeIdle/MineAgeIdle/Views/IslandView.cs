@@ -42,7 +42,7 @@ namespace MineAgeIdle
             buyShovelButtonFrameSprite = new ScaledSprite(buyShovelButtonFrameTexture, new Vector2(540, 750), 353, 155);
 
             Texture2D buyShovelButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\BuyShovelButton");
-            IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 1);
+            IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 1, true, 0);
             islandButtons.Add(buyShovelButtonSprite);
 
             Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
@@ -81,27 +81,23 @@ namespace MineAgeIdle
             foreach (IslandButton button in islandButtons)
             {
                 button.IsHovered = button.Rect.Contains(mouseState.Position);   // Check where the mouse is
+                button.Update(gameTime); // Ensure cooldown logic is processed
 
                 if (button.IsHovered && mouseState.LeftButton == ButtonState.Pressed && !isLeftMousePressed)
                 {
                     // When the button is pressed
                     isLeftMousePressed = true;
 
-                    // Reset isOnView for all buttons before setting it for the pressed button
-                    foreach (var btn in islandButtons)
+                    // Use ProcessClick to handle button actions
+                    button.ProcessClick(() =>
                     {
-                        btn.IsOnView = false;
-                    }
-
-                    // Set isOnView for the currently pressed button
-                    button.IsOnView = true;
-
-                    switch (button.Id)
-                    {
-                        case 1:
-                            ConfirmBuy();
-                            break;
-                    }
+                        switch (button.Id)
+                        {
+                            case 1:
+                                ConfirmBuy();
+                                break;
+                        }
+                    });
                 }
 
                 if (mouseState.LeftButton == ButtonState.Released)
