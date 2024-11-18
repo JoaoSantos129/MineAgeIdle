@@ -42,7 +42,7 @@ namespace MineAgeIdle
             buyShovelButtonFrameSprite = new ScaledSprite(buyShovelButtonFrameTexture, new Vector2(540, 750), 353, 155);
 
             Texture2D buyShovelButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\BuyShovelButton");
-            IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
+            IslandButton buyShovelButtonSprite = new IslandButton(buyShovelButtonTexture, new Vector2((buyShovelButtonFrameSprite.Width / 2) - (318 / 2) + buyShovelButtonFrameSprite.position.X, 10 + buyShovelButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 1);
             islandButtons.Add(buyShovelButtonSprite);
 
             Texture2D shovelTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\Shovel");
@@ -99,9 +99,6 @@ namespace MineAgeIdle
                     switch (button.Id)
                     {
                         case 1:
-                            gameManager.treasuresAmount++;
-                            break;
-                        case 2:
                             ConfirmBuy();
                             break;
                     }

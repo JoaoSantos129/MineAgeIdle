@@ -46,7 +46,7 @@ namespace MineAgeIdle
             buyTntMachineButtonFrameSprite = new ScaledSprite(buyTntMachineButtonFrameTexture, new Vector2(1500, 50), 353, 155);
 
             Texture2D buyTntMachineButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\BuyTntMachineButton");
-            MineButton buyTntMachineButtonSprite = new MineButton(buyTntMachineButtonTexture, new Vector2((buyTntMachineButtonFrameSprite.Width / 2) - (318 / 2) + buyTntMachineButtonFrameSprite.position.X, 10 + buyTntMachineButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
+            MineButton buyTntMachineButtonSprite = new MineButton(buyTntMachineButtonTexture, new Vector2((buyTntMachineButtonFrameSprite.Width / 2) - (318 / 2) + buyTntMachineButtonFrameSprite.position.X, 10 + buyTntMachineButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 1);
             mineButtons.Add(buyTntMachineButtonSprite);
 
             Texture2D tntMachineTexture = gameManager.Content.Load<Texture2D>("HUD\\Mine\\TntMachine");
@@ -113,9 +113,6 @@ namespace MineAgeIdle
                     switch (button.Id)
                     {
                         case 1:
-                            gameManager.gemsAmount++;
-                            break;
-                        case 2:
                             ConfirmBuy();
                             break;
                     }

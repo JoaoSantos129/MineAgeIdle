@@ -108,6 +108,7 @@ namespace MineAgeIdle
                     {
                         case 1:
                             gameManager.woodAmount++;
+
                             break;
                         case 2:
                             ConfirmBuy();

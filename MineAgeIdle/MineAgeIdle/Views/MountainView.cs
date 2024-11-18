@@ -41,7 +41,7 @@ namespace MineAgeIdle
             buyPickaxeButtonFrameSprite = new ScaledSprite(buyPickaxeButtonFrameTexture, new Vector2(1240, 750), 353, 155);
 
             Texture2D buyPickaxeButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\BuyPickaxeButton");
-            MountainButton buyPickaxeButtonSprite = new MountainButton(buyPickaxeButtonTexture, new Vector2((buyPickaxeButtonFrameSprite.Width / 2) - (318 / 2) + buyPickaxeButtonFrameSprite.position.X, 10 + buyPickaxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2);
+            MountainButton buyPickaxeButtonSprite = new MountainButton(buyPickaxeButtonTexture, new Vector2((buyPickaxeButtonFrameSprite.Width / 2) - (318 / 2) + buyPickaxeButtonFrameSprite.position.X, 10 + buyPickaxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 1);
             mountainButtons.Add(buyPickaxeButtonSprite);
 
             Texture2D pickaxeTexture = gameManager.Content.Load<Texture2D>("HUD\\Mountain\\Pickaxe");
@@ -98,9 +98,6 @@ namespace MineAgeIdle
                     switch (button.Id)
                     {
                         case 1:
-                            gameManager.stoneAmount++;
-                            break;
-                        case 2:
                             ConfirmBuy();
                             break;
                     }

@@ -55,30 +55,33 @@ namespace MineAgeIdle
         {
             base.Update();
 
-            // Update X position
-            if (reverseXMove)
+            if (xSpeed > 0 || ySpeed > 0)
             {
-                if (currentXPosition > finalXPosition)
-                    currentXPosition -= xSpeed;
+                // Update X position
+                if (reverseXMove)
+                {
+                    if (currentXPosition > finalXPosition)
+                        currentXPosition -= xSpeed;
+                    else
+                        currentXPosition = finalXPosition; // Snap to final position
+                }
                 else
-                    currentXPosition = finalXPosition; // Snap to final position
-            }
-            else
-            {
-                if (currentXPosition < finalXPosition)
-                    currentXPosition += xSpeed;
-                else
-                    currentXPosition = finalXPosition; // Snap to final position
-            }
+                {
+                    if (currentXPosition < finalXPosition)
+                        currentXPosition += xSpeed;
+                    else
+                        currentXPosition = finalXPosition; // Snap to final position
+                }
 
-            // Update Y position
-            if (reverseYMove)
-            {
-                currentYPosition -= ySpeed;
-            }
-            else
-            {
-                currentYPosition += ySpeed;
+                // Update Y position
+                if (reverseYMove)
+                {
+                    currentYPosition -= ySpeed;
+                }
+                else
+                {
+                    currentYPosition += ySpeed;
+                }
             }
 
             // Update the sprite's position
