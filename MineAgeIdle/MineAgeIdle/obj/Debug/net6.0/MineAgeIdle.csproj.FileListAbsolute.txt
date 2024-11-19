@@ -42,9 +42,6 @@ C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdl
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\BuyAxeButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\BuyShovelButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\BuyPickaxeButton.xnb
-C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Take.xnb
-C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\UnlockButton.xnb
-C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\UpgradesButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\Axe.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\Fonts\DefaultFont.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\ButtonFrame.xnb
@@ -110,3 +107,10 @@ D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\BuyTntM
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\MineBackground.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\Tnt.xnb
 D:\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\TntMachine.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\CollectCoinsButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\PromoteShopButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockGemsButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockStoneButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockTreasuresButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockWoodButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\ButtonFrameTransparent.xnb

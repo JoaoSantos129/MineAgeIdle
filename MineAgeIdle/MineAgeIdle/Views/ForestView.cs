@@ -38,14 +38,14 @@ namespace MineAgeIdle
             Texture2D forestBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\ForestBackground");
             forestBackgroundSprite = new ScaledSprite(forestBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
-            Texture2D buyAxeButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
+            Texture2D buyAxeButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrameTransparent");
             buyAxeButtonFrameSprite = new ScaledSprite(buyAxeButtonFrameTexture, new Vector2(540, 750), 353, 155);
 
             Texture2D buyAxeButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\BuyAxeButton");
             ForestButton buyAxeButtonSprite = new ForestButton(buyAxeButtonTexture, new Vector2((buyAxeButtonFrameSprite.Width / 2) - (318 / 2) + buyAxeButtonFrameSprite.position.X, 10 + buyAxeButtonFrameSprite.position.Y), 318, 55, Color.White, Color.Transparent, 2, false, 0);
             forestButtons.Add(buyAxeButtonSprite);
 
-            Texture2D breakButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
+            Texture2D breakButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrameTransparent");
             breakButtonFrameSprite = new ScaledSprite(breakButtonFrameTexture, new Vector2(1420, 590), 200, 75);
 
             Texture2D breakButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Forest\\BreakButton");

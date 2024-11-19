@@ -15,26 +15,43 @@ namespace MineAgeIdle
 
         private MovingSprite axeSprite;
         private MovingSprite pickaxeSprite;
-        private ScaledSprite tntMachineSprite;
         private MovingSprite tntSprite;
         private MovingSprite shovelSprite;
 
         private double elapsedTime = 0.0; // Variable to track elapsed time for continue button
         private bool tick = true; // Initial continue button visibility state
 
+        private Random random = new Random();
+        public int randomNumber;
+
         private int _currentView = 0;
 
+        public double moneyToCollect = 125;
+        public double coinsToCollectMaxAmount = 1000;
+        public double woodInStock;
+        public double woodAmountToStock = 4;
+        public double woodPrice = 0.5;
+        public double stoneInStock;
+        public double stoneAmountToStock = 3;
+        public double stonePrice = 10;
+        public double gemsInStock;
+        public double gemsAmountToStock = 2;
+        public double gemsPrice = 100;
+        public double treasuresInStock;
+        public double treasuresAmountToStock = 1;
+        public double treasuresPrice = 1000;
+
         public int CurrentView { get { return _currentView; } set { this._currentView = value; } }
-        public double woodAmount { get; set; } = 0;
+        public double coinsAmount { get; set; } = 100;
+        public double woodAmount { get; set; } = 100;
         public double axesAmount { get; set; } = 0;
+        public double stoneAmount { get; set; } = 75;
         public double pickaxesAmount { get; set; } = 0;
-        public double stoneAmount { get; set; } = 0;
+        public double gemsAmount { get; set; } = 50;
         public double tntMachinesAmount { get; set; } = 0;
-        public double gemsAmount { get; set; } = 0;
         public bool hasTriggeredGemCollection { get; set; } = false;
+        public double treasuresAmount { get; set; } = 25;
         public double shovelsAmount { get; set; } = 0;
-        public double treasuresAmount { get; set; } = 0;
-        public double coinsAmount { get; set; } = 100f;
 
         // Views
         StartView startView;
@@ -69,9 +86,10 @@ namespace MineAgeIdle
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
+
+            // Generate a random number between 1 and 1000 during initialization
+            randomNumber = random.Next(1, 1001);
         }
 
         protected override void LoadContent()
@@ -113,8 +131,19 @@ namespace MineAgeIdle
             // Check if one second has passed
             if (elapsedTime >= Constants.TICK_DURATION)
             {
-                // Toggle the visibility state
+                // Toggle the visibility state of the continue phrase
                 tick = !tick;
+                
+                // Regenerate a random number between 1 and 1000
+                randomNumber = random.Next(1, 1001);
+
+                switch (randomNumber)
+                {
+                    case > 900:
+                        woodInStock--;
+                        moneyToCollect += woodPrice;
+                        break;
+                }
 
                 // Reset the elapsed time
                 elapsedTime = 0.0;

@@ -38,7 +38,7 @@ namespace MineAgeIdle
             Texture2D islandBackgroundTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\IslandBackground");
             islandBackgroundSprite = new ScaledSprite(islandBackgroundTexture, new Vector2(Constants.MENU_WIDTH, 0), Constants.BACKGROUND_WIDTH_VIEW_WITH_MENU, Constants.DEFAULT_SCREEN_HEIGHT);
 
-            Texture2D buyShovelButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrame");
+            Texture2D buyShovelButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrameTransparent");
             buyShovelButtonFrameSprite = new ScaledSprite(buyShovelButtonFrameTexture, new Vector2(540, 750), 353, 155);
 
             Texture2D buyShovelButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Island\\BuyShovelButton");

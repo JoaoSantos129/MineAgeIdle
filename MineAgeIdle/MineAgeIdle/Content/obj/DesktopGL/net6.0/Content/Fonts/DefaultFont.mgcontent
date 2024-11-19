@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/Fonts/DefaultFont.spritefont</SourceFile>
-  <SourceTime>2024-10-30T19:14:35.579668+01:00</SourceTime>
-  <DestFile>D:/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/Fonts/DefaultFont.xnb</DestFile>
-  <DestTime>2024-11-18T20:50:05.087578+01:00</DestTime>
+  <SourceFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/Fonts/DefaultFont.spritefont</SourceFile>
+  <SourceTime>2024-07-24T14:10:50.3199118+02:00</SourceTime>
+  <DestFile>C:/Users/joao.santos/OneDrive - IMD Business School/Documents/Private/MineAgeIdle/MineAgeIdle/MineAgeIdle/Content/bin/DesktopGL/Content/Fonts/DefaultFont.xnb</DestFile>
+  <DestTime>2024-11-19T10:28:20.40297+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
