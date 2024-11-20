@@ -21,7 +21,7 @@ namespace MineAgeIdle
 
         private bool isLeftMousePressed;
 
-        private float pickaxePrice = 10;
+        private float pickaxePrice = 20;
 
         public MountainView()
         {

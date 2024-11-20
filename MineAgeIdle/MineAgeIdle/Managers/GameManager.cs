@@ -26,31 +26,43 @@ namespace MineAgeIdle
 
         private int _currentView = 0;
 
-        public double moneyToCollect = 125;
-        public double coinsToCollectMaxAmount = 1000;
+        public double moneyToCollect;
+        public int moneyStealRate = 990;
+
+        public bool forestUnlocked = false;
         public double woodInStock;
-        public double woodAmountToStock = 4;
-        public double woodPrice = 0.5;
+        public double woodAmountToStock;
+        public double woodPrice = 1;
+        public int woodSellRate = 650;
+
+        public bool mountainUnlocked = false;
         public double stoneInStock;
-        public double stoneAmountToStock = 3;
+        public double stoneAmountToStock;
         public double stonePrice = 10;
+        public int stoneSellRate = 830;
+
+        public bool mineUnlocked = false;
         public double gemsInStock;
-        public double gemsAmountToStock = 2;
+        public double gemsAmountToStock;
         public double gemsPrice = 100;
+        public int gemsSellRate = 930;
+
+        public bool islandUnlocked = false;
         public double treasuresInStock;
-        public double treasuresAmountToStock = 1;
+        public double treasuresAmountToStock;
         public double treasuresPrice = 1000;
+        public int treasuresSellRate = 980;
 
         public int CurrentView { get { return _currentView; } set { this._currentView = value; } }
-        public double coinsAmount { get; set; } = 100;
-        public double woodAmount { get; set; } = 100;
+        public double coinsAmount { get; set; } = 0;
+        public double woodAmount { get; set; } = 0;
         public double axesAmount { get; set; } = 0;
-        public double stoneAmount { get; set; } = 75;
+        public double stoneAmount { get; set; } = 0;
         public double pickaxesAmount { get; set; } = 0;
-        public double gemsAmount { get; set; } = 50;
+        public double gemsAmount { get; set; } = 0;
         public double tntMachinesAmount { get; set; } = 0;
         public bool hasTriggeredGemCollection { get; set; } = false;
-        public double treasuresAmount { get; set; } = 25;
+        public double treasuresAmount { get; set; } = 0;
         public double shovelsAmount { get; set; } = 0;
 
         // Views
@@ -125,11 +137,24 @@ namespace MineAgeIdle
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            if (axesAmount > 0)
+            {
+                woodAmountToStock = axesAmount;
+            }
+            else
+            {
+                woodAmountToStock = 1;
+            }
+
+            stoneAmountToStock = pickaxesAmount;
+            gemsAmountToStock = tntMachinesAmount;
+            treasuresAmountToStock = shovelsAmount + 1;
+
             // Update the elapsed time
             elapsedTime += gameTime.ElapsedGameTime.TotalMilliseconds;
 
             // Check if one second has passed
-            if (elapsedTime >= Constants.TICK_DURATION)
+            if (elapsedTime >= Constants.TICK_DURATION * 2)
             {
                 // Toggle the visibility state of the continue phrase
                 tick = !tick;
@@ -137,12 +162,62 @@ namespace MineAgeIdle
                 // Regenerate a random number between 1 and 1000
                 randomNumber = random.Next(1, 1001);
 
-                switch (randomNumber)
+
+                if (randomNumber > moneyStealRate && moneyToCollect > 0 && _currentView != 10)
                 {
-                    case > 900:
-                        woodInStock--;
-                        moneyToCollect += woodPrice;
-                        break;
+                    moneyToCollect = 0; // Steal the money on the cash register if the player is not on the shop
+                }
+                else if (randomNumber > treasuresSellRate && randomNumber < moneyStealRate && treasuresInStock > 0)
+                {
+                    if (moneyToCollect + treasuresPrice < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect += treasuresPrice; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    else if (moneyToCollect < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect = Constants.VALUES_MAX_AMOUNT;
+                    }
+                    treasuresInStock--; // Sell 1 treasure
+                    treasuresSellRate--;
+                }
+                else if (randomNumber > gemsSellRate && randomNumber < treasuresSellRate && gemsInStock > 0)
+                {
+                    if (moneyToCollect + gemsPrice < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect += gemsPrice; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    else if (moneyToCollect < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    gemsInStock--; // Sell 1 gem
+                    gemsSellRate--;
+                }
+                else if (randomNumber > stoneSellRate && randomNumber < gemsSellRate && stoneInStock > 0)
+                {
+                    if (moneyToCollect + stonePrice < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect += stonePrice; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    else if (moneyToCollect < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    stoneInStock--; // Sell 1 stone
+                    stoneSellRate--;
+                }
+                else if (randomNumber > woodSellRate && randomNumber < stoneSellRate && woodInStock > 0)
+                {
+                    if (moneyToCollect + woodPrice < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect += woodPrice; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    else if (moneyToCollect < Constants.VALUES_MAX_AMOUNT)
+                    {
+                        moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
+                    }
+                    woodInStock--; // Sell 1 wood
+                    woodSellRate--;
                 }
 
                 // Reset the elapsed time

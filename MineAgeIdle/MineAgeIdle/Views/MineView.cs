@@ -23,7 +23,7 @@ namespace MineAgeIdle
 
         private bool isLeftMousePressed;
 
-        private float tntMachinePrice = 10;
+        private float tntMachinePrice = 150;
         private float tntReappearDelay = 1000f; // 1 second delay before TNT reappears
         private float tntDisappearTimer = 0f;
         private bool tntHidden = false;

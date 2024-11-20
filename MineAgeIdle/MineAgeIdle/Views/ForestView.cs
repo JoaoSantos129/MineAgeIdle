@@ -22,7 +22,7 @@ namespace MineAgeIdle
 
         private bool isLeftMousePressed;
 
-        private float axePrice = 10;
+        private float axePrice = 3;
 
         public ForestView()
         {
@@ -67,6 +67,8 @@ namespace MineAgeIdle
 
             spriteBatch.DrawString(defaultFont, "Axes : " + stringAxesAmount, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 70), Color.Black);
             spriteBatch.DrawString(defaultFont, "Axe price : " + stringNextAxePrice, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 110), Color.Black);
+
+            spriteBatch.DrawString(defaultFont, "Random number : " + gameManager.randomNumber, new Vector2(1000, 950), Color.Black);
 
             foreach (ForestButton button in forestButtons)
             {

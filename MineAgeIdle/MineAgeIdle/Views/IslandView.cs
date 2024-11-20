@@ -22,7 +22,7 @@ namespace MineAgeIdle
 
         private bool isLeftMousePressed;
 
-        private float shovelPrice = 10;
+        private float shovelPrice = 1000;
 
         public IslandView()
         {

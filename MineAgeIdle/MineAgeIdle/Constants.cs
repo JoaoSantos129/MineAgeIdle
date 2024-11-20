@@ -16,5 +16,6 @@ namespace MineAgeIdle
         public static int MENU_BUTTONS_HEIGHT = 70;
         public static int MENU_VERTICAL_SPACING = 20;
         public static float INFLATION_MULTIPLIYER = 1.3f;
+        public static double VALUES_MAX_AMOUNT = 999_999_999_999_999.999;
     }
 }

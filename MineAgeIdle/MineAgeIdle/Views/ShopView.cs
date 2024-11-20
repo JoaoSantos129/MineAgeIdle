@@ -66,7 +66,7 @@ namespace MineAgeIdle
 
             // Gems button and frame
             Texture2D restockGemsButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrameTransparent");
-            restockGemsButtonFrameSprite = new ScaledSprite(restockGemsButtonFrameTexture, new Vector2(1200, 150), 420, 175);
+            restockGemsButtonFrameSprite = new ScaledSprite(restockGemsButtonFrameTexture, new Vector2(750, 150), 420, 175);
 
             Texture2D restockGemsButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Shop\\RestockGemsButton");
             ShopButton restockGemsButtonSprite = new ShopButton(restockGemsButtonTexture, new Vector2((restockGemsButtonFrameSprite.Width / 2) - (250 / 2) + restockGemsButtonFrameSprite.position.X, 10 + restockGemsButtonFrameSprite.position.Y), 250, 33, Color.White, Color.Transparent, 4, false, 1);
@@ -74,7 +74,7 @@ namespace MineAgeIdle
 
             // Treasures button and frame
             Texture2D restockTreasuresButtonFrameTexture = gameManager.Content.Load<Texture2D>("HUD\\ButtonFrameTransparent");
-            restockTreasuresButtonFrameSprite = new ScaledSprite(restockTreasuresButtonFrameTexture, new Vector2(750, 150), 420, 175);
+            restockTreasuresButtonFrameSprite = new ScaledSprite(restockTreasuresButtonFrameTexture, new Vector2(1200, 150), 420, 175);
 
             Texture2D restockTreasuresButtonTexture = gameManager.Content.Load<Texture2D>("HUD\\Shop\\RestockTreasuresButton");
             ShopButton restockTreasuresButtonSprite = new ShopButton(restockTreasuresButtonTexture, new Vector2((restockTreasuresButtonFrameSprite.Width / 2) - (250 / 2) + restockTreasuresButtonFrameSprite.position.X, 10 + restockTreasuresButtonFrameSprite.position.Y), 250, 33, Color.White, Color.Transparent, 5, false, 1);
@@ -84,7 +84,6 @@ namespace MineAgeIdle
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, bool tick)
         {
             string stringMoneyToCollect = GameManager.GetStringFormattedAmount(gameManager.moneyToCollect);
-            string stringCoinsToCollectMaxAmount = GameManager.GetStringFormattedAmount(gameManager.coinsToCollectMaxAmount);
             string stringWoodInStock = GameManager.GetStringFormattedAmount(gameManager.woodInStock);
             string stringWoodAmountToStock = GameManager.GetStringFormattedAmount(gameManager.woodAmountToStock);
             string stringWoodPrice = GameManager.GetStringFormattedAmount(gameManager.woodPrice);
@@ -122,7 +121,6 @@ namespace MineAgeIdle
             spriteBatch.DrawString(defaultFont, "Treasures price : " + stringTreasuresPrice, new Vector2(restockTreasuresButtonFrameSprite.position.X + 25, restockTreasuresButtonFrameSprite.position.Y + 130), Color.Black);
 
             spriteBatch.DrawString(defaultFont, "Coins to collect : " + stringMoneyToCollect, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 50), Color.Black);
-            //spriteBatch.DrawString(defaultFont, "Coins max amount : " + stringCoinsToCollectMaxAmount, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 90), Color.Black);
             spriteBatch.DrawString(defaultFont, "Random number : " + gameManager.randomNumber, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 90), Color.Black);
 
             foreach (ShopButton button in shopButtons)
