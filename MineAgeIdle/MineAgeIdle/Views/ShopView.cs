@@ -121,7 +121,7 @@ namespace MineAgeIdle
             spriteBatch.DrawString(defaultFont, "Treasures price : " + stringTreasuresPrice, new Vector2(restockTreasuresButtonFrameSprite.position.X + 25, restockTreasuresButtonFrameSprite.position.Y + 130), Color.Black);
 
             spriteBatch.DrawString(defaultFont, "Coins to collect : " + stringMoneyToCollect, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 50), Color.Black);
-            spriteBatch.DrawString(defaultFont, "Random number : " + gameManager.randomNumber, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 90), Color.Black);
+            spriteBatch.DrawString(defaultFont, "Random number : " + gameManager.randomNumber + "   " + gameManager.woodSellRate, new Vector2(collectCoinsButtonFrameSprite.position.X + 25, collectCoinsButtonFrameSprite.position.Y + 90), Color.Black);
 
             foreach (ShopButton button in shopButtons)
             {

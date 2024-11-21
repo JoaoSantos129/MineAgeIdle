@@ -126,6 +126,10 @@ namespace MineAgeIdle
                 tntSprite.ResetPosition();
                 tntSprite.HasReachedFinalPosition = false; // Ensure the flag is reset for the next cycle
             }
+
+            tntSprite.rotation = gameManager.tntSprite.rotation;
+            tntSprite.currentXPosition = gameManager.tntSprite.currentXPosition;
+            tntSprite.currentYPosition = gameManager.tntSprite.currentYPosition;
         }
 
         // To put in GameManager

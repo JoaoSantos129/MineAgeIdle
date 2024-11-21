@@ -13,10 +13,10 @@ namespace MineAgeIdle
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont;
 
-        private MovingSprite axeSprite;
-        private MovingSprite pickaxeSprite;
-        private MovingSprite tntSprite;
-        private MovingSprite shovelSprite;
+        public MovingSprite axeSprite;
+        public MovingSprite pickaxeSprite;
+        public MovingSprite tntSprite;
+        public MovingSprite shovelSprite;
 
         private double elapsedTime = 0.0; // Variable to track elapsed time for continue button
         private bool tick = true; // Initial continue button visibility state
@@ -24,10 +24,12 @@ namespace MineAgeIdle
         private Random random = new Random();
         public int randomNumber;
 
-        private int _currentView = 0;
+        public int _currentView = 0;
 
         public double moneyToCollect;
         public int moneyStealRate = 990;
+
+        public bool shopUnlocked = false;
 
         public bool forestUnlocked = false;
         public double woodInStock;
@@ -53,8 +55,10 @@ namespace MineAgeIdle
         public double treasuresPrice = 1000;
         public int treasuresSellRate = 980;
 
+        public bool casinoUnlocked = false;
+
         public int CurrentView { get { return _currentView; } set { this._currentView = value; } }
-        public double coinsAmount { get; set; } = 0;
+        public double coinsAmount { get; set; } = 350;
         public double woodAmount { get; set; } = 0;
         public double axesAmount { get; set; } = 0;
         public double stoneAmount { get; set; } = 0;
@@ -68,6 +72,7 @@ namespace MineAgeIdle
         // Views
         StartView startView;
         MenuView menuView;
+        LockedZoneView lockedZoneView;
         ShopView shopView;
         ForestView forestView;
         MountainView mountainView;
@@ -111,6 +116,7 @@ namespace MineAgeIdle
             // Initialize views
             startView = new StartView();
             menuView = new MenuView();
+            lockedZoneView = new LockedZoneView();
             shopView = new ShopView();
             forestView = new ForestView();
             mountainView = new MountainView();
@@ -148,7 +154,7 @@ namespace MineAgeIdle
 
             stoneAmountToStock = pickaxesAmount;
             gemsAmountToStock = tntMachinesAmount;
-            treasuresAmountToStock = shovelsAmount + 1;
+            treasuresAmountToStock = shovelsAmount;
 
             // Update the elapsed time
             elapsedTime += gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -178,7 +184,6 @@ namespace MineAgeIdle
                         moneyToCollect = Constants.VALUES_MAX_AMOUNT;
                     }
                     treasuresInStock--; // Sell 1 treasure
-                    treasuresSellRate--;
                 }
                 else if (randomNumber > gemsSellRate && randomNumber < treasuresSellRate && gemsInStock > 0)
                 {
@@ -191,7 +196,6 @@ namespace MineAgeIdle
                         moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
                     }
                     gemsInStock--; // Sell 1 gem
-                    gemsSellRate--;
                 }
                 else if (randomNumber > stoneSellRate && randomNumber < gemsSellRate && stoneInStock > 0)
                 {
@@ -204,7 +208,6 @@ namespace MineAgeIdle
                         moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
                     }
                     stoneInStock--; // Sell 1 stone
-                    stoneSellRate--;
                 }
                 else if (randomNumber > woodSellRate && randomNumber < stoneSellRate && woodInStock > 0)
                 {
@@ -217,7 +220,6 @@ namespace MineAgeIdle
                         moneyToCollect = Constants.VALUES_MAX_AMOUNT; // Gain the treasure's value in coins into the cash register respecting the max possible amount
                     }
                     woodInStock--; // Sell 1 wood
-                    woodSellRate--;
                 }
 
                 // Reset the elapsed time
@@ -234,27 +236,69 @@ namespace MineAgeIdle
                     break;
                 case 10:
                     menuView.Update(gameTime);
-                    shopView.Update(gameTime);
+                    if (shopUnlocked)
+                    {
+                        shopView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
                 case 20:
                     menuView.Update(gameTime);
-                    forestView.Update(gameTime);
+                    if (forestUnlocked)
+                    {
+                        forestView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
                 case 30:
                     menuView.Update(gameTime);
-                    mountainView.Update(gameTime);
+                    if (mountainUnlocked)
+                    {
+                        mountainView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
                 case 40:
                     menuView.Update(gameTime);
-                    mineView.Update(gameTime);
+                    if (mineUnlocked)
+                    {
+                        mineView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
                 case 50:
                     menuView.Update(gameTime);
-                    islandView.Update(gameTime);
+                    if (islandUnlocked)
+                    {
+                        islandView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
                 case 60:
                     menuView.Update(gameTime);
-                    casinoView.Update(gameTime);
+                    if (casinoUnlocked)
+                    {
+                        casinoView.Update(gameTime);
+                    }
+                    else
+                    {
+                        lockedZoneView.Update(gameTime);
+                    }
                     break;
             }
 
@@ -273,27 +317,69 @@ namespace MineAgeIdle
                     startView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 10:
-                    shopView.Draw(gameTime, _spriteBatch, tick);
+                    if (shopUnlocked)
+                    {
+                        shopView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 20:
-                    forestView.Draw(gameTime, _spriteBatch, tick);
+                    if (forestUnlocked)
+                    {
+                        forestView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 30:
-                    mountainView.Draw(gameTime, _spriteBatch, tick);
+                    if (mountainUnlocked)
+                    {
+                        mountainView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 40:
-                    mineView.Draw(gameTime, _spriteBatch, tick);
+                    if (mineUnlocked)
+                    {
+                        mineView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 50:
-                    islandView.Draw(gameTime, _spriteBatch, tick);
+                    if (islandUnlocked)
+                    {
+                        islandView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
                 case 60:
-                    casinoView.Draw(gameTime, _spriteBatch, tick);
+                    if (casinoUnlocked)
+                    {
+                        casinoView.Draw(gameTime, _spriteBatch, tick);
+                    }
+                    else
+                    {
+                        lockedZoneView.Draw(gameTime, _spriteBatch, tick);
+                    }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
             }

@@ -105,6 +105,8 @@ namespace MineAgeIdle
                     isLeftMousePressed = false;
                 }
             }
+
+            shovelSprite.rotation = gameManager.shovelSprite.rotation;
         }
 
         // To put in GameManager

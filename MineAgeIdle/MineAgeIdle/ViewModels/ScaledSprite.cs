@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace MineAgeIdle
 {
-    internal class ScaledSprite : Sprite
+    public class ScaledSprite : Sprite
     {
         public int Width { get; }
         public int Height { get; }

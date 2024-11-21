@@ -114,3 +114,10 @@ C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdl
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockTreasuresButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\RestockWoodButton.xnb
 C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\ButtonFrameTransparent.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\LockedZoneBackground.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Forest\UnlockForestButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Island\UnlockIslandButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Menu\Buttons\UpgradesButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mine\UnlockMineButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Mountain\UnlockMountainButton.xnb
+C:\Users\joao.santos\OneDrive - IMD Business School\Documents\Private\MineAgeIdle\MineAgeIdle\MineAgeIdle\bin\Debug\net6.0\Content\HUD\Shop\UnlockShopButton.xnb

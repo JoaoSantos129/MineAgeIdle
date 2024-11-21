@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MineAgeIdle
 {
-    internal class MovingSprite : ColoredSprite
+    public class MovingSprite : ColoredSprite
     {
-        protected float rotation; // Add a rotation property
+        public float rotation; // Add a rotation property
         protected float rotationSpeed; // Optional: Speed of rotation
         private float initialRotation; // Track the initial rotation for resetting
         private float targetRotation; // Target rotation in radians
@@ -18,15 +18,15 @@ namespace MineAgeIdle
         private float rotationAmount; // Amount of rotation in degrees
         public bool hasDoneRotation; // Determines when sprite has done a full rotation
         private bool reverseRotation; // If true the sprite will start with a right to left rotation
-        private float xSpeed;
-        private float initialXPosition;
-        private float currentXPosition;
-        private float finalXPosition;
-        private bool reverseXMove;
-        private float ySpeed;
-        private float initialYPosition;
-        private float currentYPosition;
-        private bool reverseYMove;
+        private float xSpeed; // Determines the sprite's speed when moving horizontally
+        private float initialXPosition; // Determines the sprite move's initial horizontal position
+        public float currentXPosition; // Determines the sprite move's current horizontal position
+        private float finalXPosition; // Determines the sprite move's final horizontal position
+        private bool reverseXMove; // Determines if the sprite horizontal move is reversed or not
+        private float ySpeed; // Determines the sprite's speed when moving vertically
+        private float initialYPosition; // Determines the sprite move's initial vertical position
+        public float currentYPosition; // Determines the sprite move's current vertical position
+        private bool reverseYMove; // Determines if the sprite vertical move is reversed or not
         public bool HasReachedFinalPosition { get; set; } = false;
 
         public MovingSprite(Texture2D texture, Vector2 position, int width, int height, Color color, Color backgroundColor, float rotation, float rotationSpeed, float rotationAmount, bool reverseRotation, float xSpeed, float currentXPosition, float finalXPosition, bool reverseXMove, float ySpeed, float currentYPosition, bool reverseYMove)
@@ -34,8 +34,8 @@ namespace MineAgeIdle
         {
             this.rotation = rotation;
             this.initialRotation = rotation; // Save the starting rotation
-            this.rotationSpeed = rotationSpeed; // Initialize rotation speed
-            this.rotationAmount = rotationAmount; // Set the desired rotation amount
+            this.rotationSpeed = rotationSpeed;
+            this.rotationAmount = rotationAmount;
             this.targetRotation = MathHelper.ToRadians(rotationAmount); // Convert rotation amount to radians
             this.isReversing = false; // Initially, it is not reversing
             this.hasDoneRotation = false; // Initially, has not completed a rotation

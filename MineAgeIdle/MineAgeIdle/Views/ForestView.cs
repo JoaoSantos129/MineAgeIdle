@@ -68,8 +68,6 @@ namespace MineAgeIdle
             spriteBatch.DrawString(defaultFont, "Axes : " + stringAxesAmount, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 70), Color.Black);
             spriteBatch.DrawString(defaultFont, "Axe price : " + stringNextAxePrice, new Vector2(buyAxeButtonFrameSprite.position.X + 25, buyAxeButtonFrameSprite.position.Y + 110), Color.Black);
 
-            spriteBatch.DrawString(defaultFont, "Random number : " + gameManager.randomNumber, new Vector2(1000, 950), Color.Black);
-
             foreach (ForestButton button in forestButtons)
             {
                 spriteBatch.Draw(button.texture, button.Rect, button.color);
@@ -119,6 +117,8 @@ namespace MineAgeIdle
                     isLeftMousePressed = false;
                 }
             }
+
+            axeSprite.rotation = gameManager.axeSprite.rotation;
         }
 
         // To put in GameManager

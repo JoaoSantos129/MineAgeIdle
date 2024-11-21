@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MineAgeIdle
 {
-    internal class ColoredSprite : ScaledSprite
+    public class ColoredSprite : ScaledSprite
     {
         public Color color { get; set; }
         public Color backgroundColor;

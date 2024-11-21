@@ -104,6 +104,18 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Forest/ForestBackground.jpeg
 
+#begin HUD/Forest/UnlockForestButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Forest/UnlockForestButton.png
+
 #begin HUD/Island/BuyShovelButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -139,6 +151,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:HUD/Island/Shovel.png
+
+#begin HUD/Island/UnlockIslandButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Island/UnlockIslandButton.png
+
+#begin HUD/LockedZoneBackground.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/LockedZoneBackground.jpg
 
 #begin HUD/Menu/Buttons/CasinoButton.png
 /importer:TextureImporter
@@ -224,6 +260,18 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Menu/Buttons/ShopButton.png
 
+#begin HUD/Menu/Buttons/UpgradesButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Menu/Buttons/UpgradesButton.png
+
 #begin HUD/Menu/MenuBackground.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -284,6 +332,18 @@
 /processorParam:TextureFormat=Color
 /build:HUD/Mine/TntMachine.png
 
+#begin HUD/Mine/UnlockMineButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Mine/UnlockMineButton.png
+
 #begin HUD/Mountain/BuyPickaxeButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -319,6 +379,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:HUD/Mountain/Pickaxe.png
+
+#begin HUD/Mountain/UnlockMountainButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Mountain/UnlockMountainButton.png
 
 #begin HUD/Shop/CollectCoinsButton.png
 /importer:TextureImporter
@@ -403,6 +475,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:HUD/Shop/ShopBackground.jpeg
+
+#begin HUD/Shop/UnlockShopButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:HUD/Shop/UnlockShopButton.png
 
 #begin HUD/Start/StartBackground.jpeg
 /importer:TextureImporter

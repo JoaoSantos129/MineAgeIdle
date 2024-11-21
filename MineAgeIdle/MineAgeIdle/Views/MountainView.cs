@@ -104,6 +104,8 @@ namespace MineAgeIdle
                     isLeftMousePressed = false;
                 }
             }
+
+            pickaxeSprite.rotation = gameManager.pickaxeSprite.rotation;
         }
 
         // To put in GameManager
