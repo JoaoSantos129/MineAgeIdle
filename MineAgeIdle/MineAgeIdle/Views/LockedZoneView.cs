@@ -77,22 +77,27 @@ namespace MineAgeIdle
                         "You also find yourself lucky enough to find a great offer of a facility that you could use as your shop.\n\n" +
                         "Now it's your opportunity to invest in something that could actually change your\n" +
                         "life, it's a risky investement, but you feel like you have nothing else to lose...\n\n\n\n", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
-                    spriteBatch.DrawString(defaultFont, "Buying the facility will cost you 350 Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
+                    spriteBatch.DrawString(defaultFont, "Buying the facility will cost you " + Constants.FACILITY_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
                 case 20:
-                    spriteBatch.DrawString(defaultFont, "Forest", new Vector2(1200, 500), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Forest description", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Buying these shoes will cost you " + Constants.SHOES_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
                 case 30:
-                    spriteBatch.DrawString(defaultFont, "Mountain", new Vector2(1200, 500), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Mountain description", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Buying these shoes will cost you " + Constants.HIKING_EQUIPEMENT_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
                 case 40:
-                    spriteBatch.DrawString(defaultFont, "Mine", new Vector2(1200, 500), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Mine description", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Buying these shoes will cost you " + Constants.DEMOLITION_EXPLOSIVE_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
                 case 50:
-                    spriteBatch.DrawString(defaultFont, "Island", new Vector2(1200, 500), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Island description", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Buying these shoes will cost you " + Constants.BOAT_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
                 case 60:
-                    spriteBatch.DrawString(defaultFont, "Casino", new Vector2(1200, 500), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Casino description", new Vector2(Constants.MENU_WIDTH + 50, 400), Color.Black);
+                    spriteBatch.DrawString(defaultFont, "Buying these shoes will cost you " + Constants.SUIT_COST + " Coins !", new Vector2(Constants.MENU_WIDTH + 50, 750), Color.Red);
                     break;
             }
 
@@ -102,7 +107,6 @@ namespace MineAgeIdle
                 if (button.Id * 10 == gameManager._currentView) // Check if the button matches the current view
                 {
                     spriteBatch.Draw(button.texture, button.Rect, button.color);
-                    break; // Only one button will match, so we can exit the loop early
                 }
             }
         }
@@ -129,7 +133,57 @@ namespace MineAgeIdle
                         switch (button.Id)
                         {
                             case 1:
-                                gameManager.shopUnlocked = true;
+                                if (gameManager.coinsAmount >= Constants.FACILITY_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.FACILITY_COST;
+                                    gameManager.shopUnlocked = true;
+                                }
+
+                                break;
+
+                            case 2:
+                                if (gameManager.coinsAmount >= Constants.SHOES_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.SHOES_COST;
+                                    gameManager.forestUnlocked = true;
+                                }
+
+                                break;
+
+                            case 3:
+                                if (gameManager.coinsAmount >= Constants.HIKING_EQUIPEMENT_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.HIKING_EQUIPEMENT_COST;
+                                    gameManager.mountainUnlocked = true;
+                                }
+
+                                break;
+
+                            case 4:
+                                if (gameManager.coinsAmount >= Constants.DEMOLITION_EXPLOSIVE_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.DEMOLITION_EXPLOSIVE_COST;
+                                    gameManager.mineUnlocked = true;
+                                }
+
+                                break;
+
+                            case 5:
+                                if (gameManager.coinsAmount >= Constants.BOAT_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.BOAT_COST;
+                                    gameManager.casinoUnlocked = true;
+                                }
+
+                                break;
+
+                            case 6:
+                                if (gameManager.coinsAmount >= Constants.SUIT_COST)
+                                {
+                                    gameManager.coinsAmount -= Constants.SUIT_COST;
+                                    gameManager.casinoUnlocked = true;
+                                }
+
                                 break;
                         }
                     });

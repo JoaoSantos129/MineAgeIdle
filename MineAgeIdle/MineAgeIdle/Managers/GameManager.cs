@@ -234,6 +234,7 @@ namespace MineAgeIdle
                 case 0:
                     startView.Update(gameTime);
                     break;
+
                 case 10:
                     menuView.Update(gameTime);
                     if (shopUnlocked)
@@ -245,6 +246,7 @@ namespace MineAgeIdle
                         lockedZoneView.Update(gameTime);
                     }
                     break;
+
                 case 20:
                     menuView.Update(gameTime);
                     if (forestUnlocked)
@@ -256,6 +258,7 @@ namespace MineAgeIdle
                         lockedZoneView.Update(gameTime);
                     }
                     break;
+
                 case 30:
                     menuView.Update(gameTime);
                     if (mountainUnlocked)
@@ -267,6 +270,7 @@ namespace MineAgeIdle
                         lockedZoneView.Update(gameTime);
                     }
                     break;
+
                 case 40:
                     menuView.Update(gameTime);
                     if (mineUnlocked)
@@ -278,6 +282,7 @@ namespace MineAgeIdle
                         lockedZoneView.Update(gameTime);
                     }
                     break;
+
                 case 50:
                     menuView.Update(gameTime);
                     if (islandUnlocked)
@@ -289,6 +294,7 @@ namespace MineAgeIdle
                         lockedZoneView.Update(gameTime);
                     }
                     break;
+
                 case 60:
                     menuView.Update(gameTime);
                     if (casinoUnlocked)
@@ -327,6 +333,7 @@ namespace MineAgeIdle
                     }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
+
                 case 20:
                     if (forestUnlocked)
                     {
@@ -338,6 +345,7 @@ namespace MineAgeIdle
                     }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
+
                 case 30:
                     if (mountainUnlocked)
                     {
@@ -349,6 +357,7 @@ namespace MineAgeIdle
                     }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
+
                 case 40:
                     if (mineUnlocked)
                     {
@@ -360,6 +369,7 @@ namespace MineAgeIdle
                     }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
+
                 case 50:
                     if (islandUnlocked)
                     {
@@ -371,6 +381,7 @@ namespace MineAgeIdle
                     }
                     menuView.Draw(gameTime, _spriteBatch, tick);
                     break;
+
                 case 60:
                     if (casinoUnlocked)
                     {

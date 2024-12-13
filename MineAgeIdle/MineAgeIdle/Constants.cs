@@ -17,5 +17,11 @@ namespace MineAgeIdle
         public static int MENU_VERTICAL_SPACING = 20;
         public static float INFLATION_MULTIPLIYER = 1.3f;
         public static double VALUES_MAX_AMOUNT = 999_999_999_999_999.999;
+        public static double FACILITY_COST = 300;
+        public static double SHOES_COST = 50;
+        public static double HIKING_EQUIPEMENT_COST = 100;
+        public static double DEMOLITION_EXPLOSIVE_COST = 750;
+        public static double BOAT_COST = 4000;
+        public static double SUIT_COST = 2000;
     }
 }
